@@ -10,8 +10,8 @@ import 'widgets/medium_article_cards_list.dart';
 import 'widgets/medium_home_header.dart';
 import 'widgets/medium_tabs_views.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+class HomeView222 extends GetView<HomeController> {
+  const HomeView222({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

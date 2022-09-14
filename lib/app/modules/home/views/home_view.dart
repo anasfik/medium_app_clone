@@ -18,6 +18,7 @@ class HomeView extends GetView<HomeController> {
           id: controller.tabBarId,
           builder: (controller) {
             return Stack(
+              fit: StackFit.expand,
               children: [
                 ListView(
                   controller: controller.homeScrollController,

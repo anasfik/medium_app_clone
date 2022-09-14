@@ -5,6 +5,7 @@ import 'package:medium_app_clone/app/modules/home/controllers/home_controller.da
 
 import '../../constants.dart';
 import '../../controllers/tab_bar_controller.dart';
+import 'medium_tab_bar_corner_blur.dart';
 
 class MediumTabBar extends GetView<HomeController> {
   MediumTabBar({
@@ -23,28 +24,39 @@ class MediumTabBar extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return ColoredBox(
       color: Theme.of(context).scaffoldBackgroundColor,
-      child: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          Container(
-            height: indicatorHeight,
-            width: double.infinity,
-            color: Theme.of(context).colorScheme.secondary.withOpacity(.2),
-          ),
-          TabBar(
-            isScrollable: true,
-            controller: mediumHomeTabController.tabController,
-            tabs: mediumHomeTabController.tabs
-                .map((tabModel) => TabModel.withCapitalizedLabel(tabModel))
-                .map(
-                  (tabModel) => tabModel.tab,
-                )
-                .toList(),
-            labelStyle: Theme.of(context).textTheme.labelMedium!.copyWith(
-                  fontWeight: FontWeight.w400,
-                ),
-          ),
-        ],
+      child: IntrinsicHeight(
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Container(
+              height: indicatorHeight,
+              width: double.infinity,
+              color: Theme.of(context).colorScheme.secondary.withOpacity(.2),
+            ),
+            TabBar(
+              physics: const ClampingScrollPhysics(
+                parent: BouncingScrollPhysics(),
+              ),
+              isScrollable: true,
+              controller: mediumHomeTabController.tabController,
+              tabs: mediumHomeTabController.tabs
+                  .map((tabModel) => TabModel.withCapitalizedLabel(tabModel))
+                  .map(
+                    (tabModel) => tabModel.tab,
+                  )
+                  .toList(),
+              labelStyle: Theme.of(context).textTheme.labelMedium!.copyWith(
+                    fontWeight: FontWeight.w400,
+                  ),
+            ),
+            const BlurBoxInCorner(
+              blurSide: BlurSide.left,
+            ),
+            const BlurBoxInCorner(
+              blurSide: BlurSide.right,
+            ),
+          ],
+        ),
       ),
     );
   }

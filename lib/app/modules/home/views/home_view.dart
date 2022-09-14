@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:medium_app_clone/app/modules/HELPERS/widgets/nil.dart';
 import 'package:medium_app_clone/app/modules/home/views/widgets/medium__tab__bar.dart';
 
-import '../constants.dart';
 import '../controllers/home_controller.dart';
 import 'widgets/medium_home_header.dart';
 
@@ -17,7 +15,7 @@ class HomeView extends GetView<HomeController> {
       child: Scaffold(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         body: GetBuilder<HomeController>(
-          id: "Medium Tab Bar",
+          id: controller.tabBarId,
           builder: (controller) {
             return Stack(
               children: [

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/data/tab_model.dart';
 import 'package:medium_app_clone/app/modules/home/controllers/home_controller.dart';
@@ -22,18 +21,31 @@ class MediumTabBar extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return TabBar(
-      isScrollable: true,
-      controller: mediumHomeTabController.tabController,
-      tabs: mediumHomeTabController.tabs
-          .map((tabModel) => TabModel.withCapitalizedLabel(tabModel))
-          .map(
-            (tabModel) => tabModel.tab,
-          )
-          .toList(),
-      labelStyle: Theme.of(context).textTheme.labelMedium!.copyWith(
-            fontWeight: FontWeight.w400,
+    return ColoredBox(
+      color: Theme.of(context).scaffoldBackgroundColor,
+      child: Stack(
+        alignment: Alignment.bottomCenter,
+        children: [
+          Container(
+            height: indicatorHeight,
+            width: double.infinity,
+            color: Theme.of(context).colorScheme.secondary.withOpacity(.2),
           ),
+          TabBar(
+            isScrollable: true,
+            controller: mediumHomeTabController.tabController,
+            tabs: mediumHomeTabController.tabs
+                .map((tabModel) => TabModel.withCapitalizedLabel(tabModel))
+                .map(
+                  (tabModel) => tabModel.tab,
+                )
+                .toList(),
+            labelStyle: Theme.of(context).textTheme.labelMedium!.copyWith(
+                  fontWeight: FontWeight.w400,
+                ),
+          ),
+        ],
+      ),
     );
   }
 }

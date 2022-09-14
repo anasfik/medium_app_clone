@@ -15,6 +15,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         body: GetBuilder<HomeController>(
           id: "Medium Tab Bar",
           builder: (controller) {
@@ -27,10 +28,10 @@ class HomeView extends GetView<HomeController> {
                   children: <Widget>[
                     Column(
                       children: [
-                        MediumHomeHeader(),
-                        !controller.isTabBarFixed
-                            ? const MediumTabBar()
-                            : const NotExpensiveWidget(),
+                        const MediumHomeHeader(),
+                        ...MediumTabBar(
+                          childStatus: ChildStatus.isChildOfListViewParent,
+                        ).asListOfWidget,
                       ],
                     ),
                     Container(
@@ -39,9 +40,9 @@ class HomeView extends GetView<HomeController> {
                     ),
                   ],
                 ),
-                controller.isTabBarFixed
-                    ? const MediumTabBar()
-                    : const NotExpensiveWidget(),
+                ...MediumTabBar(
+                  childStatus: ChildStatus.isChildOfStackParent,
+                ).asListOfWidget,
               ],
             );
           },

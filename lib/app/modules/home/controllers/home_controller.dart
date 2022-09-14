@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/home/constants.dart';
-
+enum ChildStatus {
+  isChildOfStackParent,
+  isChildOfListViewParent,
+}
 class HomeController extends GetxController {
   @override
   void onInit() {
@@ -9,8 +12,6 @@ class HomeController extends GetxController {
       // bool
       bool isScrollPositionReachedTabBar =
           homeScrollController.position.pixels >= headerHeight;
-      print(homeScrollController.position.pixels);
-      print(isScrollPositionReachedTabBar);
 
       // Check if we get to the tab bar
       if (isScrollPositionReachedTabBar) {
@@ -39,4 +40,17 @@ class HomeController extends GetxController {
 
   // boolean responsible to fix the tab bar
   bool isTabBarFixed = false;
+
+
+
+
+List getWidgetListBasedOnFixedStatus(dynamic WidgetClass) {
+  return  (WidgetClass.childStatus == ChildStatus.isChildOfListViewParent)
+        ? !isTabBarFixed
+            ? [WidgetClass]
+            : []
+        : isTabBarFixed
+            ? [WidgetClass]
+            : [];
+}
 }

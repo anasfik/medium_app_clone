@@ -12,49 +12,54 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     homeScrollController.addListener(() {
-      //
-      isScrollPositionReachedTabBar =
+      // return true when we pass header height
+      _isScrollPositionReachedTabBar =
           homeScrollController.position.pixels >= headerHeight;
-      isScrollInRangeOfHeaderHeight =
+      
+      // return true when we differ from the changing point (header height) by _rangePixelsNumberWhereItShouldRebuild
+      _isScrollInRangeOfHeaderHeight =
           (homeScrollController.position.pixels - headerHeight).abs() <=
-              rangePixelsNumberWhereItShouldRebuild;
-      if (isScrollInRangeOfHeaderHeight) {
+              _rangePixelsNumberWhereItShouldRebuild;
+
+              
+      if (_isScrollInRangeOfHeaderHeight) {
         // Check if we get to the tab bar
-        if (isScrollPositionReachedTabBar) {
+        if (_isScrollPositionReachedTabBar) {
           // Toggle tab bar fixed value
-          isTabBarFixed = isScrollPositionReachedTabBar;
+          isTabBarFixed = _isScrollPositionReachedTabBar;
           update(
             [tabBarId],
-            isScrollPositionReachedTabBar,
+            _isScrollPositionReachedTabBar,
           );
           return;
         }
 
         // Toggle tab bar fixed value when we scroll back to the top
-        isTabBarFixed = isScrollPositionReachedTabBar;
+        isTabBarFixed = _isScrollPositionReachedTabBar;
         update(
           [tabBarId],
-          !isScrollPositionReachedTabBar,
+          !_isScrollPositionReachedTabBar,
+        );
+        print(
+          'Scroll position: ${homeScrollController.position.pixels}',
         );
       }
-      print(
-        'Scroll position: ${homeScrollController.position.pixels}',
-      );
+      
     });
     super.onInit();
   }
 
   // !  Variables
   //
-  double scrollInitialPosition = 0;
-  double rangePixelsNumberWhereItShouldRebuild = 50;
+  final double _scrollInitialPosition = 0;
+  final double _rangePixelsNumberWhereItShouldRebuild = 50;
   //
   late ScrollController homeScrollController =
-      ScrollController(initialScrollOffset: scrollInitialPosition);
+      ScrollController(initialScrollOffset: _scrollInitialPosition);
   //
   bool isTabBarFixed = false;
-  bool isScrollPositionReachedTabBar = false;
-  bool isScrollInRangeOfHeaderHeight = false;
+  bool _isScrollPositionReachedTabBar = false;
+  bool _isScrollInRangeOfHeaderHeight = false;
   //
   String tabBarId = "Medium Tab Bar";
   // Methods

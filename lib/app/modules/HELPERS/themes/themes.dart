@@ -8,5 +8,18 @@ class MediumThemes {
     primaryColor: MediumColors.primary,
     scaffoldBackgroundColor: MediumColors.primary,
     textTheme: MediumTextThemes.mediumTextThemes,
+    tabBarTheme: TabBarTheme(
+      indicator: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+            color: MediumColors.black,
+            width: 1.5,
+          ),
+        ),
+      ),
+      unselectedLabelColor: MediumColors.black.withOpacity(.65),
+      labelColor: MediumColors.black,
+    
+    ),
   );
 }

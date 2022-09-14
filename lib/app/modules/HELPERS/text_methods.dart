@@ -26,4 +26,5 @@ class TextMethods {
     //
     return capitalizedFirstLetters.join(' ');
   }
+
 }

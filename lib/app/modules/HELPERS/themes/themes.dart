@@ -5,13 +5,14 @@ import '../../home/constants.dart';
 import 'text_themes.dart';
 
 class MediumThemes {
-  static ThemeData lightTheme = ThemeData(brightness: Brightness.light).copyWith(
+  static ThemeData lightTheme =
+      ThemeData(brightness: Brightness.light).copyWith(
     colorScheme: ColorScheme.dark(
       primary: MediumColors.black,
       secondary: MediumColors.black,
     ),
-    primaryColor: MediumColors.primary,
-    scaffoldBackgroundColor: MediumColors.primary,
+    primaryColor: MediumColors.white,
+    scaffoldBackgroundColor: MediumColors.white,
     textTheme: MediumTextThemes.mediumTextThemes,
     tabBarTheme: TabBarTheme(
       indicator: BoxDecoration(
@@ -24,6 +25,10 @@ class MediumThemes {
       ),
       unselectedLabelColor: MediumColors.black.withOpacity(.65),
       labelColor: MediumColors.black,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: MediumColors.green,
+      enableFeedback: false,
     ),
   );
 }

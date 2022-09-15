@@ -8,7 +8,7 @@ import 'package:medium_app_clone/app/modules/screens_viewer/view/widgets/medium_
 import '../controllers/screens_viewer_controller.dart';
 
 class ScreensViewer extends GetView<HomeController> {
-
+  const ScreensViewer({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ScreensViewerController>(

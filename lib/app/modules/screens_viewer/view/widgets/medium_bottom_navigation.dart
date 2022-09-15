@@ -13,7 +13,7 @@ class MediumBottomNavigation extends GetView<ScreensViewerController> {
           BoxShadow(
             blurRadius: 7.5,
             color: Theme.of(context).colorScheme.primary.withOpacity(.1),
-            offset: Offset(0, -1),
+            offset: const Offset(0, -1),
             spreadRadius: 0,
           ),
         ],

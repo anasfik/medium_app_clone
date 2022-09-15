@@ -12,7 +12,7 @@ class MediumSelectedArticles extends GetView<ArticleCardsController> {
   Widget build(BuildContext context) {
     return Container(
       child: SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         child: Column(
           children: <Widget>[
             ...List.generate(

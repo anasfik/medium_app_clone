@@ -33,7 +33,9 @@ class MediumArticleCard extends StatelessWidget {
                 author: article.author,
                 profile: article.authorProfileImage,
               ),
-              SpacerBox(context),
+              const SizedBox(
+                height: 6,
+              ),
               ArticleMainInformation(
                 title: article.title,
                 image: article.articleImage,
@@ -54,15 +56,9 @@ class MediumArticleCard extends StatelessWidget {
         ),
         Divider(
           color: Theme.of(context).dividerColor.withOpacity(.1),
-          thickness: 1.1,
+          thickness: 0.95,
         ),
       ],
     );
   }
-}
-
-Widget SpacerBox(context) {
-  return const SizedBox(
-    height: 6,
-  );
 }

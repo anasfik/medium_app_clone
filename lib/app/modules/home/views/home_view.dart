@@ -17,6 +17,16 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        floatingActionButton: SizedBox(
+          width: 50,
+          child: FloatingActionButton(
+            child: Icon(
+              Icons.add,
+              color: Theme.of(context).primaryColor,
+            ),
+            onPressed: () {},
+          ),
+        ),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         body: GetBuilder<HomeController>(
           id: controller.tabBarId,
@@ -24,6 +34,10 @@ class HomeView extends GetView<HomeController> {
             return Stack(
               children: [
                 NestedScrollView(
+                  key: const ValueKey("nestedScrollView"),
+                  scrollDirection: Axis.vertical,
+                  physics: const ClampingScrollPhysics(),
+                  floatHeaderSlivers: false,
                   controller: controller.homeScrollController,
                   headerSliverBuilder: ((context, innerBoxIsScrolled) =>
                       <Widget>[

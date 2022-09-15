@@ -29,9 +29,11 @@ class MediumTabBar extends GetView<HomeController> {
           alignment: Alignment.bottomCenter,
           children: [
             Container(
-              height: indicatorHeight,
+              height: homeTabBarIndicatorHeight,
               width: double.infinity,
-              color: Theme.of(context).colorScheme.secondary.withOpacity(.2),
+              color: Theme.of(context).colorScheme.secondary.withOpacity(
+                    homeTabBarNonSelectedTabsIndicatorOpacity,
+                  ),
             ),
             TabBar(
               physics: const ClampingScrollPhysics(

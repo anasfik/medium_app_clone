@@ -19,7 +19,7 @@ class MediumThemes {
         border: Border(
           bottom: BorderSide(
             color: MediumColors.black,
-            width: indicatorHeight,
+            width: homeTabBarIndicatorHeight,
           ),
         ),
       ),

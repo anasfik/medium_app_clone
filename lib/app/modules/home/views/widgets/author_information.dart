@@ -2,14 +2,17 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../HELPERS/text_methods.dart';
+import '../../constants.dart';
 
 class AuthorInformation extends StatelessWidget {
   const AuthorInformation({
     Key? key,
     required this.author,
     required this.profile,
+    this.fontWeight = FontWeight.w500,
   }) : super(key: key);
 
+  final FontWeight fontWeight;
   final String author;
   final String profile;
   @override
@@ -18,21 +21,25 @@ class AuthorInformation extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         CircleAvatar(
-          radius: 8.5,
+          radius: homeTabBarViewArticleAuthorProfileImageSize,
           backgroundImage: NetworkImage(
             profile,
           ),
         ),
-        const SizedBox(width: 7.5),
+        const SizedBox(
+          width: homeTabBarViewArticleAuthorInformationSeparatorPadding,
+        ),
         AutoSizeText(
           TextMethods.firstLettersToCapital(
             author,
           ),
           maxLines: 1,
           style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                fontWeight: FontWeight.w500,
+                fontWeight: fontWeight,
                 letterSpacing: 0,
-                color: Theme.of(context).colorScheme.primary.withOpacity(.8),
+                color: Theme.of(context).colorScheme.primary.withOpacity(
+                      homeTabBarViewArticleAuthorNameOpacity,
+                    ),
               ),
         ),
       ],

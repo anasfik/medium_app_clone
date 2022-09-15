@@ -14,9 +14,9 @@ class MediumHomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: headerPadding),
+      padding: const EdgeInsets.symmetric(horizontal: homeHeaderPadding),
       child: Container(
-        height: headerHeight,
+        height: homeHeaderHeight,
         color: Theme.of(context).primaryColor,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -31,12 +31,12 @@ class MediumHomeHeader extends StatelessWidget {
                   ),
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontWeight: FontWeight.bold,
-                        fontSize: homeFontSize,
+                        fontSize: homeHeaderFontSize,
                       ),
                 ),
                 const Icon(
                   Icons.notifications_outlined,
-                  size: notificationIconSize,
+                  size: homeHeaderNotificationIconSize,
                 )
               ],
             ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/home/controllers/home_controller.dart';
 import 'package:medium_app_clone/app/modules/home/views/home_view.dart';
-import 'package:medium_app_clone/app/modules/screens_viewer/bindings/screens_viewer_binding.dart';
 import 'package:medium_app_clone/app/modules/screens_viewer/view/widgets/medium_bottom_navigation.dart';
 
 import '../controllers/screens_viewer_controller.dart';

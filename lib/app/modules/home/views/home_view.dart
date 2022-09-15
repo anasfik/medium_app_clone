@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/home/constants.dart';
 import 'package:medium_app_clone/app/modules/home/views/widgets/medium__tab__bar.dart';
+import 'package:medium_app_clone/app/modules/home/views/widgets/medium_floating_action_button.dart';
 
 import '../controllers/home_controller.dart';
 import 'widgets/medium_article_cards_list.dart';
@@ -17,16 +18,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        floatingActionButton: SizedBox(
-          width: 50,
-          child: FloatingActionButton(
-            child: Icon(
-              Icons.add,
-              color: Theme.of(context).primaryColor,
-            ),
-            onPressed: () {},
-          ),
-        ),
+        floatingActionButton: const MediumFAB(),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         body: GetBuilder<HomeController>(
           id: controller.tabBarId,
@@ -48,10 +40,10 @@ class HomeView extends GetView<HomeController> {
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
-                              // to take place of the tabBAR when it is hidden so it work smoothly on scroll
-                              ...!controller.isTabBarFixed
-                                  ? []
-                                  : [const SizedBox(height: tabBarHeight)],
+                              // to take place of the tabBar when it is hidden so it work smoothly on scroll
+                              ...controller.isTabBarFixed
+                                  ? [const SizedBox(height: homeTabBarHeight)]
+                                  : [],
                               ...MediumTabBar(
                                 key: const ValueKey(
                                     "this is the unfixed one ( default )"),

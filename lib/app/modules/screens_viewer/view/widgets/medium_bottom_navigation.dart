@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/screens_viewer/controllers/screens_viewer_controller.dart';
 
+import '../../../home/constants.dart';
+
 class MediumBottomNavigation extends GetView<ScreensViewerController> {
   const MediumBottomNavigation({Key? key}) : super(key: key);
 
@@ -11,7 +13,7 @@ class MediumBottomNavigation extends GetView<ScreensViewerController> {
       decoration: BoxDecoration(
         boxShadow: <BoxShadow>[
           BoxShadow(
-            blurRadius: 7.5,
+            blurRadius: bottomNavigationBarShadowBlurRadius,
             color: Theme.of(context).colorScheme.primary.withOpacity(.1),
             offset: const Offset(0, -1),
             spreadRadius: 0,

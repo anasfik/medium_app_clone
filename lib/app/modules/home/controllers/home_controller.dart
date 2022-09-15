@@ -14,11 +14,11 @@ class HomeController extends GetxController {
     homeScrollController.addListener(() {
       // return true when we pass header height
       _isScrollPositionReachedTabBar =
-          homeScrollController.position.pixels >= headerHeight;
+          homeScrollController.position.pixels >= homeHeaderHeight;
 
       // return true when we differ from the changing point (header height) by _rangePixelsNumberWhereItShouldRebuild
       _isScrollInRangeOfHeaderHeight =
-          (homeScrollController.position.pixels - headerHeight).abs() <=
+          (homeScrollController.position.pixels - homeHeaderHeight).abs() <=
               _rangePixelsNumberWhereItShouldRebuild;
 
       if (_isScrollInRangeOfHeaderHeight) {
@@ -40,9 +40,9 @@ class HomeController extends GetxController {
           !_isScrollPositionReachedTabBar,
         );
       }
-        print(
-          'Scroll position: ${homeScrollController.position.pixels}',
-        );
+      print(
+        'Scroll position: ${homeScrollController.position.pixels}',
+      );
     });
     super.onInit();
   }

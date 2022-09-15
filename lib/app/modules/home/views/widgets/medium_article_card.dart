@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medium_app_clone/app/data/article_card_model.dart';
 
+import '../../constants.dart';
 import '../../controllers/article_cards_controller.dart';
 import 'article_date_information.dart';
 import 'article_main_information.dart';
@@ -19,9 +20,11 @@ class MediumArticleCard extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(
+            horizontal: homeTabBarViewArticleHorizontalPadding,
+          ),
           margin: const EdgeInsets.only(
-            top: 10,
+            top: homeTabBarViewArticlesVerticalSeparatorMargin,
           ),
           width: double.infinity,
           decoration: BoxDecoration(
@@ -34,7 +37,7 @@ class MediumArticleCard extends StatelessWidget {
                 profile: article.authorProfileImage,
               ),
               const SizedBox(
-                height: 6,
+                height: homeTabBarViewArticleBetweenAuthorAndTitleMargin,
               ),
               ArticleMainInformation(
                 title: article.title,
@@ -55,8 +58,10 @@ class MediumArticleCard extends StatelessWidget {
           ),
         ),
         Divider(
-          color: Theme.of(context).dividerColor.withOpacity(.1),
-          thickness: 0.95,
+          color: Theme.of(context).dividerColor.withOpacity(
+                homeTabBarViewArticleDividerOpacity,
+              ),
+          thickness: homeTabBarViewArticleDividerThickness,
         ),
       ],
     );

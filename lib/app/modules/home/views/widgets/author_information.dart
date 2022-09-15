@@ -30,7 +30,7 @@ class AuthorInformation extends StatelessWidget {
           ),
           maxLines: 1,
           style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w500,
                 letterSpacing: 0,
                 color: Theme.of(context).colorScheme.primary.withOpacity(.8),
               ),

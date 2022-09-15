@@ -15,6 +15,6 @@ class HomeBinding extends Bindings {
       MediumHomeTabController(),
     );
 
-    Get.put<AtricleCardsController>(AtricleCardsController());
+    Get.put<ArticleCardsController>(ArticleCardsController());
   }
 }

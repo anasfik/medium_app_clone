@@ -4,7 +4,7 @@ import 'package:medium_app_clone/app/modules/HELPERS/text_methods.dart';
 
 import '../../controllers/article_cards_controller.dart';
 
-class ArticleDateInformation extends GetWidget<AtricleCardsController> {
+class ArticleDateInformation extends GetWidget<ArticleCardsController> {
   ArticleDateInformation({
     Key? key,
     required this.publishedAt,
@@ -29,7 +29,7 @@ class ArticleDateInformation extends GetWidget<AtricleCardsController> {
                 fontSize: 11,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0,
-                color: Theme.of(context).colorScheme.primary.withOpacity(.6),
+                color: Theme.of(context).colorScheme.primary.withOpacity(.5),
               ),
         ),
         const SizedBox(
@@ -45,7 +45,7 @@ class ArticleDateInformation extends GetWidget<AtricleCardsController> {
                 fontSize: 11,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0,
-                color: Theme.of(context).colorScheme.primary.withOpacity(.6),
+                color: Theme.of(context).colorScheme.primary.withOpacity(.5),
               ),
         ),
       ],

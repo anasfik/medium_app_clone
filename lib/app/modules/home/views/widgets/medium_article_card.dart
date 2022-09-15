@@ -38,10 +38,12 @@ class MediumArticleCard extends StatelessWidget {
                 title: article.title,
                 image: article.articleImage,
               ),
-              SpacerBox(context),
               ArticleDateInformation(
                 publishedAt: article.dateOfPublish,
                 lastReadAt: article.dateOfLastRead,
+              ),
+              const SizedBox(
+                height: 5,
               ),
               ArticleReasonToShowWithExecuteIcons(
                 reasonToShow: ReasonToShow.basedOnHistory,
@@ -51,8 +53,8 @@ class MediumArticleCard extends StatelessWidget {
           ),
         ),
         Divider(
-          color: Theme.of(context).dividerColor,
-          thickness: 2,
+          color: Theme.of(context).dividerColor.withOpacity(.1),
+          thickness: 1.1,
         ),
       ],
     );
@@ -61,6 +63,6 @@ class MediumArticleCard extends StatelessWidget {
 
 Widget SpacerBox(context) {
   return const SizedBox(
-    height: 7.5,
+    height: 6,
   );
 }

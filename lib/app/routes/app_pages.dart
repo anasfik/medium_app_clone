@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:medium_app_clone/app/modules/home/views/2222222222.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';

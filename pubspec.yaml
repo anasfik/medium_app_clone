@@ -11,6 +11,8 @@ dependencies:
   flutter: 
     sdk: flutter
   google_fonts: ^3.0.1
+  auto_size_text: ^3.0.0
+  intl: ^0.17.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

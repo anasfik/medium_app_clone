@@ -16,4 +16,5 @@ class ArticleCardModel {
     required this.articleImage,
     required this.authorProfileImage,
   });
+
 }

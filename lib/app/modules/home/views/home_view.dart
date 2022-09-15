@@ -34,6 +34,7 @@ class HomeView extends GetView<HomeController> {
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
+                              // to take place of the tabBAR when it is hidden so it work smoothly on scroll
                               ...!controller.isTabBarFixed
                                   ? []
                                   : [const SizedBox(height: tabBarHeight)],

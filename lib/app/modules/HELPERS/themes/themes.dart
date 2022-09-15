@@ -5,7 +5,7 @@ import '../../home/constants.dart';
 import 'text_themes.dart';
 
 class MediumThemes {
-  static ThemeData lightTheme = ThemeData.light().copyWith(
+  static ThemeData lightTheme = ThemeData(brightness: Brightness.light).copyWith(
     colorScheme: ColorScheme.dark(
       primary: MediumColors.black,
       secondary: MediumColors.black,

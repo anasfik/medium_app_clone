@@ -6,6 +6,7 @@ import 'app/modules/HELPERS/themes/themes.dart';
 import 'app/routes/app_pages.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     GetMaterialApp(
       defaultTransition: Transition.leftToRight,

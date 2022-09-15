@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 import '../../../data/article_card_model.dart';
 
@@ -13,7 +14,8 @@ class AtricleCardsController extends GetxController {
       articleImage: "https://picsum.photos/200/300?random=${index * 2}",
       isSelectedForYouArticle: true,
       author: "anas fikhi",
-      title: "some dummy title here idk man",
+      title:
+          "some dummy title here idk man some dummy title here idk man some dummy",
       authorProfileImage: "https://picsum.photos/200/300?random=${index * 2}",
       dateOfPublish: DateTime.now().subtract(
         Duration(
@@ -27,4 +29,31 @@ class AtricleCardsController extends GetxController {
       ),
     ),
   );
+
+  //
+  String getMonthAbrFromData({required DateTime date}) {
+    return DateFormat.MMM().format(date);
+  }
+
+  String getReasonToShowText({required ReasonToShow reasonToShow}) {
+    switch (reasonToShow) {
+      case ReasonToShow.basedOnHistory:
+        return "Based on your history";
+
+      default:
+        return "";
+    }
+  }
+}
+
+enum ReasonToShow {
+  selectedForYou,
+  lastRead,
+  mostPopular,
+  basedOnHistory,
+}
+
+enum ExecuteIcons {
+  addBookmarks,
+  showLessLikeThis,
 }

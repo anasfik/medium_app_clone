@@ -14,7 +14,17 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return RefreshIndicator(
+      edgeOffset: homeTabBarHeight + homeHeaderHeight,
+      notificationPredicate: (notification) {
+        return notification.depth == 2;
+      },
+      onRefresh: () async {
+        // example
+        await Future.delayed(
+          const Duration(seconds: 2),
+        );
+      },
       child: Scaffold(
         floatingActionButton: const MediumFAB(),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,

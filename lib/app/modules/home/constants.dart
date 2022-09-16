@@ -1,6 +1,8 @@
 //
 
 // ! HOME VIEW ! //
+const bool showOverScrollGlow = false;
+
 // header
 const double homeHeaderHeight = 110;
 const double homeHeaderPadding = 20;

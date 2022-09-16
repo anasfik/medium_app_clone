@@ -34,7 +34,8 @@ class MediumThemes {
       backgroundColor: MediumColors.grey,
       labelStyle: TextStyle(
         color: MediumColors.black,
-        fontWeight: FontWeight.w100,
+        fontSize: homeHeaderTabBarViewArticleTagsChipsFontSize,
+        fontWeight: FontWeight.w400,
       ),
     ),
   );

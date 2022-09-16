@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/home/controllers/article_cards_controller.dart';
 
-import '../../constants.dart';
+import '../../../../constants.dart';
 import 'article_tags_chip.dart';
 
 class ArticleReasonToShowWithExecuteIconsOrTags

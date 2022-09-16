@@ -33,3 +33,4 @@ const double homeTabBarViewArticleDateInformationsOpacity = .5;
 const double homeTabBarViewArticleReasonToShowFontSize = 11;
 const double homeTabBarViewArticleReasonToShowOpacity = .5;
 const double homeTabBarViewArticleIconsOpacity = .4;
+const double homeHeaderTabBarViewArticleTagsChipsFontSize = 11;

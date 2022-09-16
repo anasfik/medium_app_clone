@@ -5,9 +5,9 @@ class ArticleCardModel {
   DateTime dateOfPublish;
   DateTime dateOfLastRead;
   bool isSelectedForYouArticle;
+  bool withStarEmoji;
   String articleImage;
   List<String> tags;
-
   ArticleCardModel({
     required this.author,
     required this.title,
@@ -17,6 +17,6 @@ class ArticleCardModel {
     required this.articleImage,
     required this.authorProfileImage,
     required this.tags,
+    required this.withStarEmoji,
   });
-
 }

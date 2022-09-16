@@ -33,10 +33,7 @@ class HomeView extends GetView<HomeController> {
                       <Widget>[
                         SliverToBoxAdapter(
                           child: GestureDetector(
-                              onTap: () {
-                            
-                              },
-                              child: MediumHomeHeader()),
+                              onTap: () {}, child: const MediumHomeHeader()),
                         ),
                         SliverToBoxAdapter(
                           child: Column(

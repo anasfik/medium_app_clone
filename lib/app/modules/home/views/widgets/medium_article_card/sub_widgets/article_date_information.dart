@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/HELPERS/text_methods.dart';
 
-import '../../constants.dart';
-import '../../controllers/article_cards_controller.dart';
+import '../../../../constants.dart';
+import '../../../../controllers/article_cards_controller.dart';
 
 class ArticleDateInformation extends GetWidget<ArticleCardsController> {
   ArticleDateInformation({
@@ -11,13 +11,17 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
     required this.publishedAt,
     required this.lastReadAt,
     this.spaceBetweenInformations = 3,
+    this.withStar = false,
     this.separator = "-",
+    this.starEmoji = "✨",
   }) : super(key: key);
 
   final DateTime publishedAt;
   final DateTime lastReadAt;
   final String separator;
   final double spaceBetweenInformations;
+  final bool withStar;
+  final String starEmoji;
   late final String _formattedMonth = controller.getMonthAbrFromData(
     date: publishedAt,
   );
@@ -57,6 +61,10 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
                     .withOpacity(homeTabBarViewArticleDateInformationsOpacity),
               ),
         ),
+          SizedBox(
+          width: spaceBetweenInformations * 2,
+        ),
+        if(withStar) Text(starEmoji),
       ],
     );
   }

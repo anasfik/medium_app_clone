@@ -19,10 +19,6 @@ class ArticleTagsChip extends StatelessWidget {
       ),
       padding: EdgeInsets.zero,
       label: Text(TextMethods.firstLettersToCapital(tag)),
-      labelStyle: const TextStyle(
-        fontSize: 11,
-        fontWeight: FontWeight.w400,
-      ),
     );
   }
 }

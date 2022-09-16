@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../../HELPERS/text_methods.dart';
-import '../../constants.dart';
+import '../../../../../HELPERS/text_methods.dart';
+import '../../../../constants.dart';
 
 class AuthorInformation extends StatelessWidget {
   const AuthorInformation({

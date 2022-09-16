@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:medium_app_clone/app/data/article_card_model.dart';
 
-import '../../constants.dart';
-import '../../controllers/article_cards_controller.dart';
-import 'article_date_information.dart';
-import 'article_main_information.dart';
-import 'article_reason_to_show_with_execute_icons.dart';
-import 'author_information.dart';
+import '../../../constants.dart';
+import '../../../controllers/article_cards_controller.dart';
+import 'sub_widgets/article_date_information.dart';
+import 'sub_widgets/article_main_information.dart';
+import 'sub_widgets/article_reason_to_show_with_execute_icons.dart';
+import 'sub_widgets/author_information.dart';
 
 class MediumArticleCard extends StatelessWidget {
   const MediumArticleCard({
@@ -46,13 +46,15 @@ class MediumArticleCard extends StatelessWidget {
               ArticleDateInformation(
                 publishedAt: article.dateOfPublish,
                 lastReadAt: article.dateOfLastRead,
+                withStar: article.withStarEmoji,
               ),
               const SizedBox(
                 height: 5,
               ),
               ArticleReasonToShowWithExecuteIconsOrTags(
+                reasonToShow: article.tags.isNotEmpty ? null : ReasonToShow.basedOnHistory,
                 executeIcons: const <ExecuteIcons>[],
-                replaceWithTags: true,
+                replaceWithTags: article.tags.isNotEmpty,
                 tagsList: article.tags,
               ),
             ],

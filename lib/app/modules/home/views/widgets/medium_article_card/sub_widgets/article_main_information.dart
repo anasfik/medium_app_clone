@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medium_app_clone/app/modules/HELPERS/text_methods.dart';
 
-import '../../constants.dart';
+import '../../../../constants.dart';
+
 
 class ArticleMainInformation extends StatelessWidget {
   const ArticleMainInformation({

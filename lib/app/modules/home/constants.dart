@@ -29,6 +29,7 @@ const double homeTabBarViewArticleAuthorInformationSeparatorPadding = 7.5;
 const double homeTabBarViewArticleAuthorNameOpacity = .8;
 const double homeTabBarViewArticleMainInformationHeight = 50;
 const double homeTabBarViewArticleDateInformationFontSize = 11;
+const double homeTabBarViewArticleDateInformationFontSizeForNormalCard = 13;
 const double homeTabBarViewArticleDateInformationsOpacity = .5;
 const double homeTabBarViewArticleReasonToShowFontSize = 11;
 const double homeTabBarViewArticleReasonToShowOpacity = .5;

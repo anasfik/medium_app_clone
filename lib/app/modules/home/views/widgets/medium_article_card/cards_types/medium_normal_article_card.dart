@@ -41,26 +41,24 @@ class NormalArticleCard extends StatelessWidget {
                 title: article.title,
                 image: article.articleImage,
               ),
-              ArticleDateInformation(
-                publishedAt: article.dateOfPublish,
-                lastReadAt: article.dateOfLastRead,
-                withStar: article.withStarEmoji,
-              ),
+              // ArticleDateInformation(
+              //   publishedAt: article.dateOfPublish,
+              //   lastReadAt: article.dateOfLastRead,
+              //   withStar: article.withStarEmoji,
+              // ),
+
               const SizedBox(
-                height: 5,
+                height: 15,
               ),
               ArticleReasonToShowWithExecuteIconsOrTags(
-                reasonToShow: article.tags.isNotEmpty
-                    ? null
-                    : ReasonToShow.basedOnHistory,
+                isNormalCard: true,
+         article: article,
                 executeIcons: const <ExecuteIcons>[
                   ExecuteIcons.addBookmarks,
                   // ExecuteIcons.showLessLikeThis,
                   ExecuteIcons.moreOptions,
-
                 ],
-                replaceWithTags: article.tags.isNotEmpty,
-                tagsList: article.tags,
+    
               ),
             ],
           ),

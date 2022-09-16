@@ -50,6 +50,7 @@ class ForYouArticleCard extends StatelessWidget {
                 height: 5,
               ),
               ArticleReasonToShowWithExecuteIconsOrTags(
+                article: article,
                 reasonToShow: article.tags.isNotEmpty
                     ? null
                     : ReasonToShow.basedOnHistory,

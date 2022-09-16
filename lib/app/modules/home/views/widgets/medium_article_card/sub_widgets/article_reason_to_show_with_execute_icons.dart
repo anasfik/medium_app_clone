@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medium_app_clone/app/data/article_card_model.dart';
 import 'package:medium_app_clone/app/modules/home/controllers/article_cards_controller.dart';
+import 'package:medium_app_clone/app/modules/home/views/widgets/medium_article_card/sub_widgets/article_date_information.dart';
 
 import '../../../../../../data/article_card_execute_icon_model.dart';
 import '../../../../constants.dart';
@@ -11,16 +13,19 @@ class ArticleReasonToShowWithExecuteIconsOrTags
     extends GetWidget<ArticleCardsController> {
   ArticleReasonToShowWithExecuteIconsOrTags({
     Key? key,
+    required this.article,
     required this.executeIcons,
     this.reasonToShow,
     this.replaceWithTags = false,
+    this.isNormalCard = false,
     this.tagsList = const <String>[],
   }) : super(
           key: key,
         );
 
   final ReasonToShow? reasonToShow;
-
+  final bool isNormalCard;
+  final ArticleCardModel article;
   ReasonToShow get _defaultReason => ReasonToShow.basedOnHistory;
   final List<ExecuteIcons> executeIcons;
   late final String _reasonToShowText = controller.getReasonToShowText(
@@ -30,11 +35,20 @@ class ArticleReasonToShowWithExecuteIconsOrTags
   final List<String> tagsList;
   @override
   Widget build(BuildContext context) {
-    assert(replaceWithTags ^ (reasonToShow != null),
-        "you can set only one, either reasonToShow or replaceWithTags with tagsList");
-    assert(tagsList.length <= 3, "you can set only 3 tags in maximum");
-    assert(tagsList.isEmpty ^ replaceWithTags,
-        "using a tagsList required to set replaceWithTags property to true");
+    if (!isNormalCard) {
+      assert(replaceWithTags ^ (reasonToShow != null),
+          "you can set only one, either reasonToShow or replaceWithTags with tagsList");
+      assert(tagsList.length <= 3, "you can set only 3 tags in maximum");
+      assert(tagsList.isEmpty ^ replaceWithTags,
+          "using a tagsList required to set replaceWithTags property to true");
+    }
+
+    if (isNormalCard) {
+      assert(
+          isNormalCard ==
+              (tagsList.isEmpty ^ replaceWithTags || reasonToShow != null),
+          "declaring that this a normal card is declaring that you can't use tagsList property, you can't use  reasonToShow property, you can't use replaceWithTags property, it allows only one thing at time");
+    }
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
@@ -42,7 +56,7 @@ class ArticleReasonToShowWithExecuteIconsOrTags
           flex: 2,
           child: Row(
             children: [
-              if (!replaceWithTags) ...[
+              if (!replaceWithTags && !isNormalCard) ...[
                 Text(
                   _reasonToShowText,
                   maxLines: 1,
@@ -56,6 +70,13 @@ class ArticleReasonToShowWithExecuteIconsOrTags
                                 ),
                       ),
                 ),
+              ] else if (isNormalCard) ...[
+                ArticleDateInformation(
+                  isForNormalCard: isNormalCard,
+                  publishedAt: article.dateOfPublish,
+                  lastReadAt: article.dateOfLastRead,
+                  withStar: article.withStarEmoji,
+                )
               ] else
                 ...List.generate(
                   tagsList.length,

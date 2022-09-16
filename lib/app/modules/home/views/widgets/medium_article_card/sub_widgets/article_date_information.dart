@@ -14,6 +14,7 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
     this.withStar = false,
     this.separator = "-",
     this.starEmoji = "✨",
+    this.isForNormalCard = false,
   }) : super(key: key);
 
   final DateTime publishedAt;
@@ -22,6 +23,7 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
   final double spaceBetweenInformations;
   final bool withStar;
   final String starEmoji;
+  final bool isForNormalCard;
   late final String _formattedMonth = controller.getMonthAbrFromData(
     date: publishedAt,
   );
@@ -52,7 +54,8 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
         Text(
           TextMethods.firstLettersToCapital("${lastReadAt.minute} min read"),
           style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                fontSize: homeTabBarViewArticleDateInformationFontSize,
+                fontSize: isForNormalCard ? homeTabBarViewArticleDateInformationFontSizeForNormalCard
+                    : homeTabBarViewArticleDateInformationFontSize,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0,
                 color: Theme.of(context)
@@ -61,10 +64,10 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
                     .withOpacity(homeTabBarViewArticleDateInformationsOpacity),
               ),
         ),
-          SizedBox(
+        SizedBox(
           width: spaceBetweenInformations * 2,
         ),
-        if(withStar) Text(starEmoji),
+        if (withStar) Text(starEmoji),
       ],
     );
   }

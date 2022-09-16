@@ -9,19 +9,17 @@ class MediumTabBarView extends GetView<MediumHomeTabController> {
 
   @override
   Widget build(BuildContext context) {
-    return TabBarView(
-        controller: controller.tabController,
-        children: const <Widget>[
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-          MediumSelectedArticles(),
-        ]);
+    return TabBarView(controller: controller.tabController, children: <Widget>[
+      ...List.generate(
+        controller.tabs.length,
+        (index) => MediumSelectedArticles(
+          isForYouSection: index ==
+              controller.tabs.indexWhere(
+                (tabModel) =>
+                    tabModel.tab.text?.toLowerCase().contains("for you") ?? false,
+              ),
+        ),
+      )
+    ]);
   }
 }

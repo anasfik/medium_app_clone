@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/home/controllers/article_cards_controller.dart';
 
+import '../../../../../../data/article_card_execute_icon_model.dart';
 import '../../../../constants.dart';
+import 'article_execute_icons.dart';
 import 'article_tags_chip.dart';
 
 class ArticleReasonToShowWithExecuteIconsOrTags
@@ -66,28 +68,8 @@ class ArticleReasonToShowWithExecuteIconsOrTags
         ),
         Expanded(
           flex: 1,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Icon(
-                Icons.bookmark_add_outlined,
-                color: Theme.of(context).colorScheme.primary.withOpacity(
-                      homeTabBarViewArticleIconsOpacity,
-                    ),
-              ),
-              Icon(
-                Icons.remove_circle_outline_outlined,
-                color: Theme.of(context).colorScheme.primary.withOpacity(
-                      homeTabBarViewArticleIconsOpacity,
-                    ),
-              ),
-              Icon(
-                Icons.more_vert,
-                color: Theme.of(context).colorScheme.primary.withOpacity(
-                      homeTabBarViewArticleIconsOpacity,
-                    ),
-              ),
-            ],
+          child: CardExecuteIcons(
+            executeIcons: executeIcons,
           ),
         )
       ],

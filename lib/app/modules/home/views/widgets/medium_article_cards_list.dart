@@ -6,8 +6,8 @@ import 'package:medium_app_clone/app/modules/home/controllers/article_cards_cont
 import 'package:medium_app_clone/app/modules/home/views/widgets/medium_article_card/medium_article_card.dart';
 
 class MediumSelectedArticles extends GetView<ArticleCardsController> {
-  const MediumSelectedArticles({Key? key}) : super(key: key);
-
+  const MediumSelectedArticles({Key? key, this.isForYouSection = false}) : super(key: key);
+final bool isForYouSection;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,6 +19,7 @@ class MediumSelectedArticles extends GetView<ArticleCardsController> {
               controller.articles.length,
               (index) => MediumArticleCard(
                 article: controller.articles[index],
+                isForYouArticleCard: isForYouSection,
               ),
             ),
           ],

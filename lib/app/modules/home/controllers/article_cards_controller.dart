@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
@@ -14,7 +15,6 @@ class ArticleCardsController extends GetxController {
       articleImage: "https://picsum.photos/200/300?random=${index * 2}",
       isSelectedForYouArticle: true,
       author: "anas fikhi",
-
       title: "Firebase Remote Config with Flutter",
       authorProfileImage: "https://picsum.photos/200/300?random=${index * 2}",
       dateOfPublish: DateTime.now().subtract(
@@ -46,6 +46,11 @@ class ArticleCardsController extends GetxController {
         return "";
     }
   }
+
+
+
+
+
 }
 
 enum ReasonToShow {
@@ -53,9 +58,4 @@ enum ReasonToShow {
   lastRead,
   mostPopular,
   basedOnHistory,
-}
-
-enum ExecuteIcons {
-  addBookmarks,
-  showLessLikeThis,
 }

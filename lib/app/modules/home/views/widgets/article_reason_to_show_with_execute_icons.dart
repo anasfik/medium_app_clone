@@ -9,22 +9,30 @@ class ArticleReasonToShowWithExecuteIconsOrTags
     extends GetWidget<ArticleCardsController> {
   ArticleReasonToShowWithExecuteIconsOrTags({
     Key? key,
-    required this.reasonToShow,
     required this.executeIcons,
+    this.reasonToShow,
     this.replaceWithTags = false,
     this.tagsList = const <String>[],
   }) : super(
           key: key,
         );
-  final ReasonToShow reasonToShow;
+
+  final ReasonToShow? reasonToShow;
+
+  ReasonToShow get _defaultReason => ReasonToShow.basedOnHistory;
   final List<ExecuteIcons> executeIcons;
   late final String _reasonToShowText = controller.getReasonToShowText(
-    reasonToShow: reasonToShow,
+    reasonToShow: reasonToShow ?? _defaultReason,
   );
   final bool replaceWithTags;
   final List<String> tagsList;
   @override
   Widget build(BuildContext context) {
+    assert(replaceWithTags ^ (reasonToShow != null),
+        "you can set only one, either reasonToShow or replaceWithTags with tagsList");
+    assert(tagsList.length <= 3, "you can set only 3 tags in maximum");
+    assert(tagsList.isEmpty ^ replaceWithTags,
+        "using a tagsList required to set replaceWithTags property to true");
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[

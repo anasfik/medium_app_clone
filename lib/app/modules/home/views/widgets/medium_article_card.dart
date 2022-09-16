@@ -51,7 +51,6 @@ class MediumArticleCard extends StatelessWidget {
                 height: 5,
               ),
               ArticleReasonToShowWithExecuteIconsOrTags(
-                reasonToShow: ReasonToShow.basedOnHistory,
                 executeIcons: const <ExecuteIcons>[],
                 replaceWithTags: true,
                 tagsList: article.tags,

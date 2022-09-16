@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -7,7 +6,6 @@ import 'package:medium_app_clone/app/modules/home/views/widgets/medium__tab__bar
 import 'package:medium_app_clone/app/modules/home/views/widgets/medium_floating_action_button.dart';
 
 import '../controllers/home_controller.dart';
-import 'widgets/medium_article_cards_list.dart';
 import 'widgets/medium_home_header.dart';
 import 'widgets/medium_tabs_views.dart';
 
@@ -33,8 +31,12 @@ class HomeView extends GetView<HomeController> {
                   controller: controller.homeScrollController,
                   headerSliverBuilder: ((context, innerBoxIsScrolled) =>
                       <Widget>[
-                        const SliverToBoxAdapter(
-                          child: MediumHomeHeader(),
+                        SliverToBoxAdapter(
+                          child: GestureDetector(
+                              onTap: () {
+                            
+                              },
+                              child: MediumHomeHeader()),
                         ),
                         SliverToBoxAdapter(
                           child: Column(

@@ -6,6 +6,7 @@ class ArticleCardModel {
   DateTime dateOfLastRead;
   bool isSelectedForYouArticle;
   String articleImage;
+  List<String> tags;
 
   ArticleCardModel({
     required this.author,
@@ -15,6 +16,7 @@ class ArticleCardModel {
     required this.isSelectedForYouArticle,
     required this.articleImage,
     required this.authorProfileImage,
+    required this.tags,
   });
 
 }

@@ -11,22 +11,25 @@ class ArticleCardsController extends GetxController {
   List<ArticleCardModel> articles = List.generate(
     10,
     (index) => ArticleCardModel(
-      articleImage: "https://picsum.photos/200/300?random=${index * 2}",
-      isSelectedForYouArticle: true,
-      author: "anas fikhi",
-      title: "Firebase Remote Config with Flutter",
-      authorProfileImage: "https://picsum.photos/200/300?random=${index * 2}",
-      dateOfPublish: DateTime.now().subtract(
-        Duration(
-          minutes: Random().nextInt(60),
+        articleImage: "https://picsum.photos/200/300?random=${index * 2}",
+        isSelectedForYouArticle: true,
+        author: "anas fikhi",
+        title: "Firebase Remote Config with Flutter",
+        authorProfileImage: "https://picsum.photos/200/300?random=${index * 2}",
+        dateOfPublish: DateTime.now().subtract(
+          Duration(
+            minutes: Random().nextInt(60),
+          ),
         ),
-      ),
-      dateOfLastRead: DateTime.now().subtract(
-        Duration(
-          minutes: 20 - Random().nextInt(20),
+        dateOfLastRead: DateTime.now().subtract(
+          Duration(
+            minutes: 20 - Random().nextInt(20),
+          ),
         ),
-      ),
-    ),
+        tags: <String>[
+          "Flutter",
+          "Firebase",
+        ]),
   );
 
   //

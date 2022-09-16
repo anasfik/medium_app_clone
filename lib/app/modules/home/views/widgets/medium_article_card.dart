@@ -50,9 +50,11 @@ class MediumArticleCard extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              ArticleReasonToShowWithExecuteIcons(
+              ArticleReasonToShowWithExecuteIconsOrTags(
                 reasonToShow: ReasonToShow.basedOnHistory,
                 executeIcons: const <ExecuteIcons>[],
+                replaceWithTags: true,
+                tagsList: article.tags,
               ),
             ],
           ),

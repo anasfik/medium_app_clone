@@ -30,5 +30,12 @@ class MediumThemes {
       backgroundColor: MediumColors.green,
       enableFeedback: false,
     ),
+    chipTheme: ChipThemeData(
+      backgroundColor: MediumColors.grey,
+      labelStyle: TextStyle(
+        color: MediumColors.black,
+        fontWeight: FontWeight.w100,
+      ),
+    ),
   );
 }

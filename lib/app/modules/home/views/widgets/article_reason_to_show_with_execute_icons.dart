@@ -3,13 +3,16 @@ import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/home/controllers/article_cards_controller.dart';
 
 import '../../constants.dart';
+import 'article_tags_chip.dart';
 
-class ArticleReasonToShowWithExecuteIcons
+class ArticleReasonToShowWithExecuteIconsOrTags
     extends GetWidget<ArticleCardsController> {
-  ArticleReasonToShowWithExecuteIcons({
+  ArticleReasonToShowWithExecuteIconsOrTags({
     Key? key,
     required this.reasonToShow,
     required this.executeIcons,
+    this.replaceWithTags = false,
+    this.tagsList = const <String>[],
   }) : super(
           key: key,
         );
@@ -18,6 +21,8 @@ class ArticleReasonToShowWithExecuteIcons
   late final String _reasonToShowText = controller.getReasonToShowText(
     reasonToShow: reasonToShow,
   );
+  final bool replaceWithTags;
+  final List<String> tagsList;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -25,17 +30,30 @@ class ArticleReasonToShowWithExecuteIcons
       children: <Widget>[
         Expanded(
           flex: 2,
-          child: Text(
-            _reasonToShowText,
-            maxLines: 1,
-            style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                  fontSize: homeTabBarViewArticleReasonToShowFontSize,
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0,
-                  color: Theme.of(context).colorScheme.primary.withOpacity(
-                        homeTabBarViewArticleReasonToShowOpacity,
+          child: Row(
+            children: [
+              if (!replaceWithTags) ...[
+                Text(
+                  _reasonToShowText,
+                  maxLines: 1,
+                  style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                        fontSize: homeTabBarViewArticleReasonToShowFontSize,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0,
+                        color:
+                            Theme.of(context).colorScheme.primary.withOpacity(
+                                  homeTabBarViewArticleReasonToShowOpacity,
+                                ),
                       ),
                 ),
+              ] else
+                ...List.generate(
+                  tagsList.length,
+                  (index) => ArticleTagsChip(
+                    tag: tagsList[index],
+                  ),
+                )
+            ],
           ),
         ),
         Expanded(

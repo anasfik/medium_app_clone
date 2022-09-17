@@ -16,7 +16,9 @@ class ScreensViewer extends GetView<HomeController> {
       id: Get.find<ScreensViewerController>().indexedStackId,
       builder: (screensViewerController) {
         return Scaffold(
-          bottomNavigationBar: const MediumBottomNavigation(),
+          bottomNavigationBar: MediumBottomNavigation(
+            selectedIndex: screensViewerController.currentScreenIndex,
+          ),
           body: IndexedStack(
             index: screensViewerController.currentScreenIndex,
             children: <Widget>[

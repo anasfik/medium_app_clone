@@ -5,8 +5,12 @@ import 'package:medium_app_clone/app/modules/screens_viewer/controllers/screens_
 import '../../../../config/constants.dart';
 
 class MediumBottomNavigation extends GetView<ScreensViewerController> {
-  const MediumBottomNavigation({Key? key}) : super(key: key);
+  const MediumBottomNavigation({
+    Key? key,
+    required this.selectedIndex,
+  }) : super(key: key);
 
+  final int selectedIndex;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +33,7 @@ class MediumBottomNavigation extends GetView<ScreensViewerController> {
         enableFeedback: false,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        currentIndex: controller.currentScreenIndex,
+        currentIndex: selectedIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         items: const <BottomNavigationBarItem>[

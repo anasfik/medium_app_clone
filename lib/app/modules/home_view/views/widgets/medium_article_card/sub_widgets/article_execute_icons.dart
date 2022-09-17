@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
 
-import '../../../../../../data/article_card_execute_icon_model.dart';
+import '../../../../../../data/medium_article_card_execute_icon_model.dart';
 import '../../../../../../config/constants.dart';
 import '../../../../controllers/article_cards_executeI_con_controller.dart';
 

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:medium_app_clone/app/data/article_card_model.dart';
+import 'package:medium_app_clone/app/data/medium_article_card_model.dart';
 import 'package:medium_app_clone/app/modules/home_view/controllers/article_cards_controller.dart';
 import 'package:medium_app_clone/app/modules/home_view/views/widgets/medium_article_card/sub_widgets/article_date_information.dart';
 
-import '../../../../../../data/article_card_execute_icon_model.dart';
+import '../../../../../../data/medium_article_card_execute_icon_model.dart';
 import '../../../../../../config/constants.dart';
 import 'article_execute_icons.dart';
 import 'article_tags_chip.dart';

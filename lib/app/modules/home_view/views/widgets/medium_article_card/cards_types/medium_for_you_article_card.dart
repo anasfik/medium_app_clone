@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medium_app_clone/app/data/article_card_model.dart';
+import 'package:medium_app_clone/app/data/medium_article_card_model.dart';
 
-import '../../../../../../data/article_card_execute_icon_model.dart';
+import '../../../../../../data/medium_article_card_execute_icon_model.dart';
 import '../../../../../../config/constants.dart';
 import '../../../../controllers/article_cards_controller.dart';
 import '../../medium_divide.dart';

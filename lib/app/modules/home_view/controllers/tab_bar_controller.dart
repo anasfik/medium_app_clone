@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:medium_app_clone/app/data/tab_model.dart';
+import 'package:medium_app_clone/app/data/medium_tab_model.dart';
 
 class MediumHomeTabController extends GetxController
     with GetSingleTickerProviderStateMixin {

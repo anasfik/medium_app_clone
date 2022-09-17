@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-import '../../../data/article_card_model.dart';
+import '../../../data/medium_article_card_model.dart';
 
 class ArticleCardsController extends GetxController {
 // Dumb data articles

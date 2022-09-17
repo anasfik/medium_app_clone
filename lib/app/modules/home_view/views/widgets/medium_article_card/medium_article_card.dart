@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medium_app_clone/app/data/article_card_model.dart';
+import 'package:medium_app_clone/app/data/medium_article_card_model.dart';
 import 'package:medium_app_clone/app/modules/home_view/views/widgets/medium_article_card/cards_types/medium_for_you_article_card.dart';
 
 import 'cards_types/medium_normal_article_card.dart';

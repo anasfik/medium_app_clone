@@ -38,3 +38,15 @@ const double homeTabBarViewArticleReasonToShowOpacity = .5;
 const double homeTabBarViewArticleIconsOpacity = .4;
 const double homeHeaderTabBarViewArticleTagsChipsFontSize = 11;
 const double homeHeaderTabBarViewArticleExecuteIconsLeftMargin = 10;
+
+// ! SearchView !
+
+// header
+/// since we use the same header in home view, we use the same constatnts
+
+// search bar
+
+// recommended tags
+const double searchRecommendedTagsHorizontalPadding = 15;
+const double searchRecommendedTagsVerticalPadding = 0;
+const double searchRecommendedTagsRightMargin = 10;

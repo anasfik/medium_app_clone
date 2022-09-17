@@ -6,19 +6,23 @@ class ArticleTagsChip extends StatelessWidget {
     Key? key,
     required this.tag,
     this.horizontalPadding = 10,
+    this.verticalPadding = -4,
   }) : super(key: key);
 
   final double horizontalPadding;
   final String tag;
+  final double verticalPadding;
   @override
   Widget build(BuildContext context) {
     return Chip(
-      visualDensity: const VisualDensity(horizontal: 0.0, vertical: -4),
+      visualDensity: VisualDensity(horizontal: 0.0, vertical: verticalPadding),
       labelPadding: EdgeInsets.symmetric(
         horizontal: horizontalPadding,
       ),
       padding: EdgeInsets.zero,
-      label: Text(TextMethods.firstLettersToCapital(tag)),
+      label: Text(
+        TextMethods.firstLettersToCapital(tag),
+      ),
     );
   }
 }

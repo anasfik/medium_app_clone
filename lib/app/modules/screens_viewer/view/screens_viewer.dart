@@ -18,11 +18,10 @@ class ScreensViewer extends GetView<HomeController> {
         return Scaffold(
           bottomNavigationBar: const MediumBottomNavigation(),
           body: IndexedStack(
-
             index: screensViewerController.currentScreenIndex,
-            children:  <Widget>[
+            children: <Widget>[
               const HomeView(),
-             SearchView(),
+              SearchView(),
               Center(
                 child: const Text("aaaaaaaaaaaa"),
               ),

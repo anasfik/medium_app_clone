@@ -4,5 +4,7 @@ class MediumSearchTagChip extends ArticleTagsChip {
   const MediumSearchTagChip({
     super.key,
     required super.tag,
+    super.horizontalPadding,
+    super.verticalPadding,
   });
 }

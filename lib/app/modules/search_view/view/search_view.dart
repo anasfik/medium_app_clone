@@ -7,8 +7,9 @@ import 'widgets/medium_search_recommended_tags.dart';
 import 'widgets/medium_search_search_bar.dart';
 
 class SearchView extends GetView<SearchViewController> {
-   SearchView({Key? key}) : super(key: key);
-final SearchViewController searchViewController = Get.put<SearchViewController>(SearchViewController());
+  SearchView({Key? key}) : super(key: key);
+  final SearchViewController searchViewController =
+      Get.put<SearchViewController>(SearchViewController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +18,9 @@ final SearchViewController searchViewController = Get.put<SearchViewController>(
           children: <Widget>[
             const MediumSearchHeader(),
             const MediumSearchBar(),
-            MediumSearchRecommendedTags(tags: controller.tagsList)
+            MediumSearchRecommendedTags(
+              tags: controller.tagsList,
+            )
           ],
         ),
       ),

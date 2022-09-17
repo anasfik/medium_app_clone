@@ -33,10 +33,8 @@ class SearchView extends GetView<SearchViewController> {
             const SizedBox(
               height: 12.5,
             ),
-            MediumTrendings(
-              indexWhereToInjectTheDailyHighlightsOfMedium: 6,
-            ),
-            
+            MediumTrendings(),
+            // HightlightsOnMedium(),
           ],
         ),
       ),

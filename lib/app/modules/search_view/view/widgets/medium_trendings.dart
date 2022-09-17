@@ -9,11 +9,9 @@ import 'trending_title.dart';
 class MediumTrendings extends GetView<TrendsController> {
   MediumTrendings({
     super.key,
-    required this.indexWhereToInjectTheDailyHighlightsOfMedium,
   });
 
   final TrendsController trendsController = Get.put(TrendsController());
-  final double indexWhereToInjectTheDailyHighlightsOfMedium;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +28,8 @@ class MediumTrendings extends GetView<TrendsController> {
             controller.trendsArticles.length,
             (index) => TrendArticleCard(
               trend: controller.trendsArticles[index],
-              order: index,
+              order: index + 1,
+            
             ),
           )
         ],

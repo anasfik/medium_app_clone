@@ -22,6 +22,7 @@ class TrendsController extends GetxController {
             minutes: 20 - Random().nextInt(20),
           ),
         ),
+        withStar: Random().nextBool(),
       ),
     ),
   ];

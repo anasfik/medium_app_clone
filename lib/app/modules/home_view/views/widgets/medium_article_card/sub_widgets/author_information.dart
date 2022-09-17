@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import '../../../../../../config/helpers/text_methods.dart';
 import '../../../../../../config/constants.dart';
 
-class AuthorInformation extends StatelessWidget {
-  const AuthorInformation({
+class ArticleAuthorInformation extends StatelessWidget {
+  const ArticleAuthorInformation({
     Key? key,
     required this.author,
     required this.profile,

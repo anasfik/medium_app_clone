@@ -6,5 +6,6 @@ class MediumSearchTagChip extends ArticleTagsChip {
     required super.tag,
     super.horizontalPadding,
     super.verticalPadding,
+    super.textFontWeight,
   });
 }

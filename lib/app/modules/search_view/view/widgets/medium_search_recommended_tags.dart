@@ -11,20 +11,28 @@ class MediumSearchRecommendedTags extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(
-        children: <Widget>[
-          ...List.generate(
-            tags.length,
-            (index) => Container(
-              margin: const EdgeInsets.only(right: searchRecommendedTagsRightMargin),
-              child: MediumSearchTagChip(
-                horizontalPadding: searchRecommendedTagsHorizontalPadding,
-                verticalPadding: searchRecommendedTagsVerticalPadding,
-                tag: tags[index],
+      child: Padding(
+        padding: const EdgeInsets.only(
+          right: searchMainMargin,
+        ),
+        child: Row(
+          children: <Widget>[
+            ...List.generate(
+              tags.length,
+              (index) => Container(
+                margin: const EdgeInsets.only(
+                  left: searchRecommendedTagsRightMargin,
+                ),
+                child: MediumSearchTagChip(
+                  horizontalPadding: searchRecommendedTagsHorizontalPadding,
+                  verticalPadding: searchRecommendedTagsVerticalPadding,
+                  textFontWeight: FontWeight.w500,
+                  tag: tags[index],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

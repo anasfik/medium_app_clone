@@ -12,7 +12,7 @@ class MediumArticleCard extends StatelessWidget {
   }) : super(key: key);
 
   final bool isForYouArticleCard;
-  final ArticleCardModel article;
+  final ArticleCard article;
   @override
   Widget build(BuildContext context) {
     if (isForYouArticleCard) {
@@ -21,8 +21,7 @@ class MediumArticleCard extends StatelessWidget {
       );
     }
     return NormalArticleCard(
-      article:
-      article,
+      article: article,
     );
   }
 }

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/search_view_controller.dart';
+import 'widgets/medium_divider.dart';
 import 'widgets/medium_search_header.dart';
 import 'widgets/medium_search_recommended_tags.dart';
 import 'widgets/medium_search_search_bar.dart';
+import 'widgets/medium_trendings.dart';
 
 class SearchView extends GetView<SearchViewController> {
   SearchView({Key? key}) : super(key: key);
@@ -18,9 +20,23 @@ class SearchView extends GetView<SearchViewController> {
           children: <Widget>[
             const MediumSearchHeader(),
             const MediumSearchBar(),
+            const SizedBox(
+              height: 17.5,
+            ),
             MediumSearchRecommendedTags(
               tags: controller.tagsList,
-            )
+            ),
+            const SizedBox(
+              height: 12.5,
+            ),
+            const MediumSearchDivider(),
+            const SizedBox(
+              height: 12.5,
+            ),
+            MediumTrendings(
+              indexWhereToInjectTheDailyHighlightsOfMedium: 6,
+            ),
+            
           ],
         ),
       ),

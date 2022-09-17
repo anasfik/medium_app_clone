@@ -40,13 +40,16 @@ const double homeHeaderTabBarViewArticleTagsChipsFontSize = 11;
 const double homeHeaderTabBarViewArticleExecuteIconsLeftMargin = 10;
 
 // ! SearchView !
-
+const double searchMainMargin = 20;
 // header
 /// since we use the same header in home view, we use the same constatnts
 
 // search bar
-
+const double searchSearchBarHeight = 40;
+const double searchSearchBarIconSize = 24;
+const double searchSearchBarTextFontSize = 12;
 // recommended tags
 const double searchRecommendedTagsHorizontalPadding = 15;
 const double searchRecommendedTagsVerticalPadding = 0;
 const double searchRecommendedTagsRightMargin = 10;
+const double searchSearchBarBorderRAdiusValue = 10;

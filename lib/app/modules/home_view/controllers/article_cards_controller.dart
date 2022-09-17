@@ -9,9 +9,9 @@ import '../../../data/article_card_model.dart';
 class ArticleCardsController extends GetxController {
 // Dumb data articles
 // ! this is just for testing
-  List<ArticleCardModel> articles = List.generate(
+  List<ArticleCard> articles = List.generate(
     10,
-    (index) => ArticleCardModel(
+    (index) => ArticleCard(
       articleImage: "https://picsum.photos/200/300?random=${index * 2}",
       isSelectedForYouArticle: true,
       author: "anas fikhi",
@@ -46,11 +46,6 @@ class ArticleCardsController extends GetxController {
         return "";
     }
   }
-
-
-
-
-
 }
 
 enum ReasonToShow {

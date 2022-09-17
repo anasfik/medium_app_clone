@@ -12,7 +12,7 @@ import '../sub_widgets/author_information.dart';
 class NormalArticleCard extends StatelessWidget {
   const NormalArticleCard({Key? key, required this.article}) : super(key: key);
 
-  final ArticleCardModel article;
+  final ArticleCard article;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,7 +30,7 @@ class NormalArticleCard extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              AuthorInformation(
+              ArticleAuthorInformation(
                 author: article.author,
                 profile: article.authorProfileImage,
               ),
@@ -52,13 +52,12 @@ class NormalArticleCard extends StatelessWidget {
               ),
               ArticleReasonToShowWithExecuteIconsOrTags(
                 isNormalCard: true,
-         article: article,
+                article: article,
                 executeIcons: const <ExecuteIcons>[
                   ExecuteIcons.addBookmarks,
                   // ExecuteIcons.showLessLikeThis,
                   ExecuteIcons.moreOptions,
                 ],
-    
               ),
             ],
           ),

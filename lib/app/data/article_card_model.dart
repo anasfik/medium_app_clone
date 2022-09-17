@@ -1,4 +1,4 @@
-class ArticleCardModel {
+class ArticleCard {
   String author;
   String authorProfileImage;
   String title;
@@ -8,7 +8,7 @@ class ArticleCardModel {
   bool withStarEmoji;
   String articleImage;
   List<String> tags;
-  ArticleCardModel({
+  ArticleCard({
     required this.author,
     required this.title,
     required this.dateOfPublish,

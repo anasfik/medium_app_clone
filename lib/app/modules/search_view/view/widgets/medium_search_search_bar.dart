@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medium_app_clone/app/config/HELPERS/text_methods.dart';
 
+import '../../../../config/constants.dart';
+
 class MediumSearchBar extends StatelessWidget {
   const MediumSearchBar({
     super.key,
@@ -13,12 +15,12 @@ class MediumSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
+      height: searchSearchBarHeight,
       margin: const EdgeInsets.symmetric(
-        horizontal: 20,
+        horizontal: searchMainMargin,
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(searchSearchBarBorderRAdiusValue),
       ),
       clipBehavior: Clip.hardEdge,
       child: TextField(
@@ -26,11 +28,11 @@ class MediumSearchBar extends StatelessWidget {
           hintText: TextMethods.firstLettersToCapital(hint),
           prefixIcon: Icon(
             icon,
-            size: 24,
+            size: searchSearchBarIconSize,
           ),
           hintStyle: Theme.of(context).textTheme.labelLarge!.copyWith(
             fontWeight: FontWeight.w100,
-            fontSize: 12,
+            fontSize: searchSearchBarTextFontSize,
             shadows: <Shadow>[
               Shadow(
                 offset: const Offset(0, 0),

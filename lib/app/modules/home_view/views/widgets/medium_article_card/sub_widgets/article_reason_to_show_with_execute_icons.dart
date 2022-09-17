@@ -25,7 +25,7 @@ class ArticleReasonToShowWithExecuteIconsOrTags
 
   final ReasonToShow? reasonToShow;
   final bool isNormalCard;
-  final ArticleCardModel article;
+  final ArticleCard article;
   ReasonToShow get _defaultReason => ReasonToShow.basedOnHistory;
   final List<ExecuteIcons> executeIcons;
   late final String _reasonToShowText = controller.getReasonToShowText(

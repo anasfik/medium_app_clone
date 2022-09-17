@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:medium_app_clone/app/modules/home/controllers/home_controller.dart';
-import 'package:medium_app_clone/app/modules/home/views/home_view.dart';
+import 'package:medium_app_clone/app/modules/home_view/controllers/home_controller.dart';
+import 'package:medium_app_clone/app/modules/home_view/views/home_view.dart';
 import 'package:medium_app_clone/app/modules/screens_viewer/view/widgets/medium_bottom_navigation.dart';
 
+import '../../search_view/view/search_view.dart';
 import '../controllers/screens_viewer_controller.dart';
 
 class ScreensViewer extends GetView<HomeController> {
@@ -17,14 +18,13 @@ class ScreensViewer extends GetView<HomeController> {
         return Scaffold(
           bottomNavigationBar: const MediumBottomNavigation(),
           body: IndexedStack(
+
             index: screensViewerController.currentScreenIndex,
-            children: const <Widget>[
-              HomeView(),
+            children:  <Widget>[
+              const HomeView(),
+             SearchView(),
               Center(
-                child: Text("aaa"),
-              ),
-              Center(
-                child: Text("aaaaaaaaaaaa"),
+                child: const Text("aaaaaaaaaaaa"),
               ),
               Center(
                 child: Text("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"),

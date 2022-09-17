@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/screens_viewer/controllers/screens_viewer_controller.dart';
 
-import '../../../home/constants.dart';
+import '../../../../config/constants.dart';
 
 class MediumBottomNavigation extends GetView<ScreensViewerController> {
   const MediumBottomNavigation({Key? key}) : super(key: key);

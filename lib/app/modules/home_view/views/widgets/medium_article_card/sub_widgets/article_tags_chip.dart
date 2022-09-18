@@ -35,7 +35,9 @@ class ArticleTagsChip extends StatelessWidget {
                 data.value = false;
               },
               child: Chip(
-                backgroundColor: data.value ? Colors.red[200] : null,
+                backgroundColor: data.value
+                    ? Theme.of(context).colorScheme.primary.withOpacity(.1)
+                    : null,
                 visualDensity:
                     VisualDensity(horizontal: 0.0, vertical: verticalPadding),
                 labelPadding: EdgeInsets.symmetric(

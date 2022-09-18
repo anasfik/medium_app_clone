@@ -7,5 +7,6 @@ class MediumSearchTagChip extends ArticleTagsChip {
     super.horizontalPadding,
     super.verticalPadding,
     super.textFontWeight,
+    super.ableToBeActiveOnTouch = true,
   });
 }

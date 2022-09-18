@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:medium_app_clone/app/data/medium_highlight.dart';
 
 class HighlightsController extends GetxController {
-  List<Highlight> highlighs = [
+  List<Highlight> highlights = [
     ...List.generate(
       5,
       (index) => Highlight(

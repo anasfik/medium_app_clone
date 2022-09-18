@@ -43,7 +43,7 @@ class HighlightSectionTitle extends StatelessWidget {
       style: Theme.of(context).textTheme.headlineMedium!.copyWith(
         color: Theme.of(context).primaryColor,
         fontWeight: FontWeight.bold,
-        fontSize: 27.5,
+        fontSize: 30,
         shadows: <Shadow>[
           Shadow(
             blurRadius: 0.0,

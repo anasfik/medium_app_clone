@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
+import 'package:medium_app_clone/app/config/constants.dart';
 
 import '../../../../../data/medium_highlight.dart';
 import '../../../controllers/highlights_controller.dart';
@@ -20,14 +21,31 @@ class HightlightsOnMedium extends GetView<HighlightsController> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Theme.of(context).colorScheme.primary,
+      color: Theme.of(context).primaryColorDark,
       width: double.infinity,
-      child: Column(
-        children: <Widget>[
-          HighlightSectionTitle(),
-          const HighlightSectionSubTitle(),
-        HighlightsScrollView(),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: searchMainMargin),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: searchMainMargin),
+              child: HighlightSectionTitle(),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: searchMainMargin),
+              child: HighlightSectionSubTitle(),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            HighlightsScrollView(),
+          ],
+        ),
       ),
     );
   }

@@ -7,9 +7,11 @@ import 'text_themes.dart';
 class MediumThemes {
   static ThemeData lightTheme =
       ThemeData(brightness: Brightness.light).copyWith(
+        primaryColorDark: MediumColors.darkBlack,
     colorScheme: ColorScheme.dark(
       primary: MediumColors.black,
       secondary: MediumColors.black,
+      
     ),
     primaryColor: MediumColors.white,
     scaffoldBackgroundColor: MediumColors.white,

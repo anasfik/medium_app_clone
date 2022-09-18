@@ -15,6 +15,7 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
     this.separator = "-",
     this.starEmoji = "✨",
     this.isForNormalCard = false,
+    this.textColor,
   }) : super(key: key);
 
   final DateTime publishedAt;
@@ -24,6 +25,7 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
   final bool withStar;
   final String starEmoji;
   final bool isForNormalCard;
+  final Color? textColor;
   late final String _formattedMonth = controller.getMonthAbrFromData(
     date: publishedAt,
   );
@@ -38,10 +40,9 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
                 fontSize: homeTabBarViewArticleDateInformationFontSize,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0,
-                color: Theme.of(context)
-                    .colorScheme
-                    .primary
-                    .withOpacity(homeTabBarViewArticleDateInformationsOpacity),
+                color: textColor ??
+                    Theme.of(context).colorScheme.primary.withOpacity(
+                        homeTabBarViewArticleDateInformationsOpacity),
               ),
         ),
         SizedBox(
@@ -54,14 +55,14 @@ class ArticleDateInformation extends GetWidget<ArticleCardsController> {
         Text(
           TextMethods.firstLettersToCapital("${lastReadAt.minute} min read"),
           style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                fontSize: isForNormalCard ? homeTabBarViewArticleDateInformationFontSizeForNormalCard
+                fontSize: isForNormalCard
+                    ? homeTabBarViewArticleDateInformationFontSizeForNormalCard
                     : homeTabBarViewArticleDateInformationFontSize,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0,
-                color: Theme.of(context)
-                    .colorScheme
-                    .primary
-                    .withOpacity(homeTabBarViewArticleDateInformationsOpacity),
+                color: textColor ??
+                    Theme.of(context).colorScheme.primary.withOpacity(
+                        homeTabBarViewArticleDateInformationsOpacity),
               ),
         ),
         SizedBox(

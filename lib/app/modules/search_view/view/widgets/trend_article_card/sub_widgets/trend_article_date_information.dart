@@ -6,5 +6,6 @@ class TrendArticleDateInformation extends ArticleDateInformation {
     required super.lastReadAt,
     required super.publishedAt,
     super.withStar,
+    super.textColor,
   });
 }

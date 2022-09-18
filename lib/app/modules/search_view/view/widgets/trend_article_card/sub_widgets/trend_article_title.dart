@@ -2,8 +2,10 @@ import 'package:medium_app_clone/app/modules/home_view/views/widgets/medium_arti
 import 'package:medium_app_clone/app/modules/home_view/views/widgets/medium_article_card/sub_widgets/articletitle.dart';
 
 class TrendArticleTitle extends ArticleTitle {
-  const TrendArticleTitle({
+  TrendArticleTitle({
+    super.key,
     required super.title,
     required super.titleMaxLines,
+    super.textColor,
   });
 }

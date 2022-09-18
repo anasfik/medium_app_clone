@@ -16,7 +16,7 @@ class HighlightSectionSubTitle extends StatelessWidget {
       style: Theme.of(context).textTheme.labelLarge!.copyWith(
             color: Theme.of(context).primaryColor.withOpacity(.4),
             fontWeight: FontWeight.w500,
-            fontSize: 14,
+            fontSize: 15,
           ),
     );
   }

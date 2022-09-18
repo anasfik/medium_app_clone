@@ -7,4 +7,5 @@ class MediumColors {
   static Color green = hex("#1a8917");
   static Color grey = hex("#F2F2F2");
   static Color darkGrey = hex("#757575");
+  static Color darkBlack = hex("#000");
 }

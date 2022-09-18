@@ -11,8 +11,8 @@ import 'sub_widgets/highlight_scroll_view.dart';
 import 'sub_widgets/highlight_section_sub_title.dart';
 import 'sub_widgets/highlight_section_title.dart';
 
-class HightlightsOnMedium extends GetView<HighlightsController> {
-  HightlightsOnMedium({
+class HighlightsOnMedium extends GetView<HighlightsController> {
+  HighlightsOnMedium({
     super.key,
   });
 

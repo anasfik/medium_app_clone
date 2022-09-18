@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../controllers/search_view_controller.dart';
 import 'widgets/medium_divider.dart';
 import 'widgets/medium_highlights/medium_highlights.dart';
+import 'widgets/medium_recommended_articles/medium_recommended_articles.dart';
 import 'widgets/medium_search_header.dart';
 import 'widgets/medium_search_recommended_tags.dart';
 import 'widgets/medium_search_search_bar.dart';
@@ -35,7 +36,8 @@ class SearchView extends GetView<SearchViewController> {
               height: 12.5,
             ),
             MediumTrendings(),
-            HightlightsOnMedium(),
+            HighlightsOnMedium(),
+            MediumRecommendedArticles(),
           ],
         ),
       ),

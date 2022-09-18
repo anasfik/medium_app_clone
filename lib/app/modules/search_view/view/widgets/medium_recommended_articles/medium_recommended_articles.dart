@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/config/constants.dart';
-import 'package:medium_app_clone/app/modules/home_view/controllers/article_cards_controller.dart';
-import 'package:medium_app_clone/app/modules/home_view/views/widgets/medium_article_card/medium_article_card.dart';
-
 import '../../../controllers/medium_recommended_articles_controller.dart';
+import 'sub_widgets/medium_recommended_article.dart';
 import 'sub_widgets/medium_recommended_articles_title.dart';
 
 class MediumRecommendedArticles
@@ -39,7 +37,7 @@ class MediumRecommendedArticles
           ),
           ...List.generate(
             controller.recommendedArticles.length,
-            (index) => MediumArticleCard(
+            (index) => MediumRecommendedArticle(
               article: controller.recommendedArticles[index],
             ),
           ),

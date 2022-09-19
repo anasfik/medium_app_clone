@@ -1,5 +1,6 @@
 # Medium app clone
 
+![medium_logo](/docs_assets/medium_logo.png | =150x150 )
 A medium's app mobile app clone using dart/flutter framework
 
 # ScreenShots
@@ -13,18 +14,18 @@ A medium's app mobile app clone using dart/flutter framework
     - [x] icon
   - [x] Tab bar with `TabModel()`
     - [x] Fixed / Sticky tab bar on scroll with possibility to navigate
-       - [ ] Fixed only on down scroll, while on top's will display the header again 
+      - [ ] Fixed only on down scroll, while on top's will display the header again
     - [x] Gradient effect on corners
     - [ ] Plus icon will show different view than other tag
   - [x] Divider
   - [x] Floating action button
   - [x] Articles tab bar view
-      - [ ] Shimmer loading effect 
-      - [ ] Lazy articles loading
+    - [ ] Shimmer loading effect
+    - [ ] Lazy articles loading
   - [x] Articles card from `ArticleModel()`
     - [x] Author informations (profile, image, author)
     - [x] Main informations (title, article image)
-       - [ ] Community name if it exists for article 
+      - [ ] Community name if it exists for article
     - [x] Dynamic date of publish, date of last read
     - [x] Action Icons with their enum
       - [ ] add article to bookmark
@@ -55,8 +56,8 @@ A medium's app mobile app clone using dart/flutter framework
       - [x] Header image
       - [x] Title
       - [x] Corner / Community
-  - [ ] People to follow 
-     - [ ] Profile image
-     - [ ] Author
-     - [ ] Bio
-     - [ ] Follow button  
+  - [ ] People to follow
+    - [ ] Profile image
+    - [ ] Author
+    - [ ] Bio
+    - [ ] Follow button

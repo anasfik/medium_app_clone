@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medium_app_clone/app/config/helpers/text_methods.dart';
 
 import '../../../../../../config/constants.dart';
-import 'articletitle.dart';
+import 'article_title.dart';
 
 class ArticleMainInformation extends StatelessWidget {
   const ArticleMainInformation({
@@ -40,10 +40,10 @@ class ArticleMainInformation extends StatelessWidget {
             image,
             height: homeTabBarViewArticleMainInformationHeight,
             fit: imageBoxFit,
+            
           ),
         )
       ],
     );
   }
 }
-

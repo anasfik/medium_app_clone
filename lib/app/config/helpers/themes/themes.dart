@@ -7,11 +7,10 @@ import 'text_themes.dart';
 class MediumThemes {
   static ThemeData lightTheme =
       ThemeData(brightness: Brightness.light).copyWith(
-        primaryColorDark: MediumColors.darkBlack,
+    primaryColorDark: MediumColors.darkBlack,
     colorScheme: ColorScheme.dark(
       primary: MediumColors.black,
       secondary: MediumColors.black,
-      
     ),
     primaryColor: MediumColors.white,
     scaffoldBackgroundColor: MediumColors.white,
@@ -57,5 +56,15 @@ class MediumThemes {
       contentPadding: EdgeInsets.zero,
       filled: true,
     ),
+    tooltipTheme: TooltipThemeData(
+      enableFeedback: false,
+      showDuration: const Duration(seconds: 1),
+      padding: const EdgeInsets.all(1),
+      decoration: BoxDecoration(
+        color: MediumColors.grey,
+        borderRadius: BorderRadius.circular(5),
+      ),
+    ),
   );
 }
+ 

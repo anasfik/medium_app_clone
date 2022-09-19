@@ -40,7 +40,11 @@ class ArticleCardsController extends GetxController {
   String getReasonToShowText({required ReasonToShow reasonToShow}) {
     switch (reasonToShow) {
       case ReasonToShow.basedOnHistory:
-        return "Based on your history";
+        return "based on your history";
+      case ReasonToShow.lastRead:
+        return "based on last reads";
+      case ReasonToShow.selectedForYou:
+        return "selected for you";
 
       default:
         return "";

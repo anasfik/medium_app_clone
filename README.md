@@ -4,9 +4,9 @@
 
 A medium's app mobile app clone using dart/flutter framework
 
-# ScreenShots
+# 📱Screen shots
 
-# Tasks
+# 📝 Tasks
 
 - [x] Bottom navigation bar
 - [ ] Home page
@@ -73,7 +73,7 @@ A medium's app mobile app clone using dart/flutter framework
 
 
 
-# Contribute
+# ✏️ Contribute
 You can be a part of this project by contributing / helping in this project
 every type of contribution are welcome in this project from : 
  - Using the app and declaring issues, bugs, features 

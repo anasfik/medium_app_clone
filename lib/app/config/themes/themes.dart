@@ -64,7 +64,6 @@ class MediumThemes {
         color: MediumColors.grey,
         borderRadius: BorderRadius.circular(5),
       ),
-      
     ),
     buttonTheme: ButtonThemeData(
       colorScheme: ColorScheme.dark(
@@ -72,8 +71,7 @@ class MediumThemes {
         secondary: MediumColors.black,
       ),
       buttonColor: MediumColors.green,
-    
     ),
+    hoverColor: MediumColors.green.withGreen(bookmarksHeaderButtonHoverBgColorDarkness),
   );
 }
- 

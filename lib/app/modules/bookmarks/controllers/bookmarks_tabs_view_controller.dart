@@ -12,7 +12,7 @@ class BookmarksTabsViewController extends GetxController
       tab: const Tab(
         text: "Saved",
       ),
-      widget: BookmarksSavedTabView(),
+      widget: const BookmarksSavedTabView(),
     ),
     TabModel(
       tab: const Tab(

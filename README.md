@@ -1,10 +1,17 @@
-# Medium app clone
+# Medium App Clone
 
 <img src="/docs_assets/medium_logo.png" alt="medium_logo" width="150"/>
 
-A medium's app mobile app clone using dart/flutter framework
+Medium app clpne developped with Dart/Flutter framework, getx for state management, used dummy data to showcase (for now at least) 
 
 # 📱Screen shots
+<p align="left"">
+
+<img src="/docs_assets/screenshots/flutter_01.png" alt="screenshot" width="250"/>
+<img src="/docs_assets/screenshots/flutter_02.png" alt="screenshot" width="250"/>
+<img src="/docs_assets/screenshots/flutter_03.png" alt="screenshot" width="250"/>
+<img src="/docs_assets/screenshots/flutter_04.png" alt="screenshot" width="250"/>
+</p>
 
 # 📝 Tasks
 
@@ -73,11 +80,17 @@ A medium's app mobile app clone using dart/flutter framework
 
 
 
-<<<<<<< HEAD
-# Contribute
-=======
+# 📈 Usage
+First, make sure you have at least `Flutter v3.3` and `Dart v2.16.0`
+Then run this in the Cmd (Command line)
+
+```
+git clone https://github.com/anasfik/medium_app_clone.git
+cd medium_app_clone
+flutter get packages
+flutter run
+```
 # ✏️ Contribute
->>>>>>> 85d9b30c075e67810e041baa36bc99c463c041ee
 You can be a part of this project by contributing / helping in this project
 every type of contribution are welcome in this project from : 
  - Using the app and declaring issues, bugs, features 

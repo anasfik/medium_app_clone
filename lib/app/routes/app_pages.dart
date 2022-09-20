@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
-import 'package:medium_app_clone/app/modules/search_view/bindings/search_view_binding.dart';
-import 'package:medium_app_clone/app/modules/search_view/view/search_view.dart';
+import 'package:medium_app_clone/app/modules/search/bindings/search_view_binding.dart';
+import 'package:medium_app_clone/app/modules/search/view/search_view.dart';
 
-import '../modules/home_view/bindings/home_binding.dart';
-import '../modules/home_view/views/home_view.dart';
-import '../modules/screens_viewer/bindings/screens_viewer_binding.dart';
-import '../modules/screens_viewer/view/screens_viewer.dart';
+import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/home_view.dart';
+import '../modules/screens/bindings/screens_viewer_binding.dart';
+import '../modules/screens/view/screens_viewer.dart';
 
 part 'app_routes.dart';
 

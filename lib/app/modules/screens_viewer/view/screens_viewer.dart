@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/home/controllers/home_controller.dart';
 import 'package:medium_app_clone/app/modules/home/views/home_view.dart';
-import 'package:medium_app_clone/app/modules/screens/view/widgets/medium_bottom_navigation.dart';
+import 'package:medium_app_clone/app/modules/screens_viewer/view/widgets/medium_bottom_navigation.dart';
 
+import '../../bookmarks/bookmarks_view.dart';
 import '../../search/view/search_view.dart';
 import '../controllers/screens_viewer_controller.dart';
 
@@ -24,9 +25,7 @@ class ScreensViewer extends GetView<HomeController> {
             children: <Widget>[
               const HomeView(),
               SearchView(),
-              Center(
-                child: const Text("aaaaaaaaaaaa"),
-              ),
+              BookmarksView(),
               Center(
                 child: Text("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"),
               ),

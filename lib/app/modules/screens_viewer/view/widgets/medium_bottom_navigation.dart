@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:medium_app_clone/app/modules/screens/controllers/screens_viewer_controller.dart';
+import 'package:medium_app_clone/app/modules/screens_viewer/controllers/screens_viewer_controller.dart';
 
 import '../../../../config/constants.dart';
 

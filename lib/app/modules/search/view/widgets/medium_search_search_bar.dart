@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medium_app_clone/app/config/HELPERS/text_methods.dart';
 
 import '../../../../config/constants.dart';
 
@@ -25,7 +24,7 @@ class MediumSearchBar extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       child: TextField(
         decoration: InputDecoration(
-          hintText: TextMethods.firstLettersToCapital(hint),
+          hintText: hint,
           prefixIcon: Icon(
             icon,
             size: searchSearchBarIconSize,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:medium_app_clone/helpers/string_extension/string_methods.dart';
+import 'package:medium_app_clone/helpers/string_extension/string_extension.dart';
 
 import '../../../../../../config/constants.dart';
 import '../../../../controllers/article_cards_controller.dart';

@@ -3,14 +3,16 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  static const home = _Paths.homePath;
+  static const home = _Paths.homeViewPath;
   static const screensViewer = _Paths.screensViewer;
   static const searchView = _Paths.searchViewPath;
+  static const bookmarksViewPath = _Paths.bookmarksViewPath;
 }
 
 abstract class _Paths {
   _Paths._();
   static const screensViewer = '/';
-  static const homePath = '/home';
-  static const searchViewPath = '/';
+  static const homeViewPath = '/home';
+  static const searchViewPath = '/search';
+  static const bookmarksViewPath = '/bookmarks';
 }

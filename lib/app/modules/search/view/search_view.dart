@@ -16,29 +16,31 @@ class SearchView extends GetView<SearchViewController> {
       Get.put<SearchViewController>(SearchViewController());
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            const MediumSearchHeader(),
-            const MediumSearchBar(),
-            const SizedBox(
-              height: 17.5,
-            ),
-            MediumSearchRecommendedTags(
-              tags: controller.tagsList,
-            ),
-            const SizedBox(
-              height: 12.5,
-            ),
-            const MediumSearchDivider(),
-            const SizedBox(
-              height: 12.5,
-            ),
-            MediumTrendings(),
-            HighlightsOnMedium(),
-            MediumRecommendedArticles(),
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              const MediumSearchHeader(),
+              const MediumSearchBar(),
+              const SizedBox(
+                height: 17.5,
+              ),
+              MediumSearchRecommendedTags(
+                tags: controller.tagsList,
+              ),
+              const SizedBox(
+                height: 12.5,
+              ),
+              const MediumSearchDivider(),
+              const SizedBox(
+                height: 12.5,
+              ),
+              MediumTrendings(),
+              HighlightsOnMedium(),
+              MediumRecommendedArticles(),
+            ],
+          ),
         ),
       ),
     );

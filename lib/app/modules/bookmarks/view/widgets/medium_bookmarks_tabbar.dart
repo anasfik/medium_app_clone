@@ -1,25 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/models/medium_tab_model.dart';
-import 'package:medium_app_clone/app/modules/home/controllers/home_controller.dart';
+import 'package:medium_app_clone/app/modules/bookmarks/controllers/bookmarks_tabs_view_controller.dart';
 
 import '../../../../config/constants.dart';
-import '../../controllers/tab_bar_controller.dart';
-import 'medium_tab_bar_corner_blur.dart';
 
-class MediumTabBar extends GetView<HomeController> {
-  MediumTabBar({
+class MediumBookmarksTabBar extends GetView<BookmarksTabsViewController> {
+  MediumBookmarksTabBar({
     Key? key,
-    required this.childStatus,
   }) : super(key: key);
 
-  final ChildStatus childStatus;
-  final mediumHomeTabController = Get.find<MediumHomeTabController>();
-  late List asListOfWidget = controller.getWidgetListBasedOnFixedStatus(
-    MediumTabBar(
-      childStatus: childStatus,
-    ),
-  );
+  final mediumTabBarTabController = Get.put(BookmarksTabsViewController());
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +32,8 @@ class MediumTabBar extends GetView<HomeController> {
                 parent: BouncingScrollPhysics(),
               ),
               isScrollable: true,
-              controller: mediumHomeTabController.tabController,
-              tabs: mediumHomeTabController.tabs
+              controller: mediumTabBarTabController.tabController,
+              tabs: mediumTabBarTabController.tabs
                   .map((tabModel) => TabModel.withCapitalizedLabel(tabModel))
                   .map(
                     (tabModel) => tabModel.tab,
@@ -51,12 +42,6 @@ class MediumTabBar extends GetView<HomeController> {
               labelStyle: Theme.of(context).textTheme.labelMedium!.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
-            ),
-            const BlurBoxInCorner(
-              blurSide: BlurSide.left,
-            ),
-            const BlurBoxInCorner(
-              blurSide: BlurSide.right,
             ),
           ],
         ),

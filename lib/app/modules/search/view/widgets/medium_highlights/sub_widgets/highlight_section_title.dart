@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:medium_app_clone/helpers/string_extension/string_methods.dart';
+import 'package:medium_app_clone/helpers/string_extension/string_extension.dart';
 
 class HighlightSectionTitle extends StatelessWidget {
   HighlightSectionTitle({

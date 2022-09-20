@@ -53,3 +53,13 @@ const double searchRecommendedTagsHorizontalPadding = 15;
 const double searchRecommendedTagsVerticalPadding = 0;
 const double searchRecommendedTagsRightMargin = 10;
 const double searchSearchBarBorderRAdiusValue = 10;
+
+// ! Bookmarks !
+
+const double bookmarksHeaderButtonWidth = 90;
+const double bookmarksHeaderButtonHeight = bookmarksHeaderButtonWidth / 2.5;
+const double bookmarksHeaderButtonBorderRadius = 100;
+// const double bookmarksHeaderButtonWidth = 100;
+// const double bookmarksHeaderButtonWidth = 100;
+// const double bookmarksHeaderButtonWidth = 100;
+// const double bookmarksHeaderButtonWidth = 100;

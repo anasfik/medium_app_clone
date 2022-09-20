@@ -64,6 +64,15 @@ class MediumThemes {
         color: MediumColors.grey,
         borderRadius: BorderRadius.circular(5),
       ),
+      
+    ),
+    buttonTheme: ButtonThemeData(
+      colorScheme: ColorScheme.dark(
+        primary: MediumColors.green,
+        secondary: MediumColors.black,
+      ),
+      buttonColor: MediumColors.green,
+    
     ),
   );
 }

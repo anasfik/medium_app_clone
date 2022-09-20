@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../../helpers/string_extension/string_methods.dart';
+import '../../../../../../../helpers/string_extension/string_extension.dart';
 
 class ArticleTitle extends StatelessWidget {
   ArticleTitle({

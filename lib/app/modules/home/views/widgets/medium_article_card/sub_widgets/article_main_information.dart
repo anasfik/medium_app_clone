@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medium_app_clone/helpers/string_extension/string_methods.dart';
+import 'package:medium_app_clone/helpers/string_extension/string_extension.dart';
 
 import '../../../../../../config/constants.dart';
 import 'article_title.dart';

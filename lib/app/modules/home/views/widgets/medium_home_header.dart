@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medium_app_clone/helpers/string_extension/string_methods.dart';
+import 'package:medium_app_clone/helpers/string_extension/string_extension.dart';
 
 import '../../../../config/constants.dart';
 
@@ -8,14 +8,22 @@ class MediumHomeHeader extends StatelessWidget {
     Key? key,
     this.title = "home",
     this.showIcon = true,
+    this.showButton = false,
     this.icon = Icons.notifications_outlined,
+    this.buttonWidget,
   }) : super(key: key);
 
   final String title;
   final bool showIcon;
+  final bool showButton;
   final IconData icon;
+final Widget? buttonWidget;
   @override
   Widget build(BuildContext context) {
+    assert(
+        (showIcon == showButton ) || !(showButton && showIcon), "You can't show both icon and button, only one");
+    assert((buttonWidget != null) == showButton,
+        "to show a button you need to pass a widget to buttonWidget property");
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: homeHeaderPadding),
       child: Container(
@@ -40,7 +48,9 @@ class MediumHomeHeader extends StatelessWidget {
                     icon,
                     size: homeHeaderNotificationIconSize,
                   )
-                ]
+                ] else if (showButton) ...[
+                  buttonWidget ?? Container(),
+                ],
               ],
             ),
           ],

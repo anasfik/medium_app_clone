@@ -5,5 +5,6 @@ class MediumSearchHeader extends MediumHomeHeader {
     super.key,
     super.title = "Search",
     super.showIcon = false,
+    super.showButton = false,
   });
 }

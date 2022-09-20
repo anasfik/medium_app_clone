@@ -1,4 +1,4 @@
-extension ArritionalStringMethods on String {
+extension AdditionalStringMethods on String {
   
   String firstLettersToCapital() {
     // remove extra padding letter spaces

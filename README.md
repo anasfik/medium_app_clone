@@ -1,6 +1,7 @@
 # Medium app clone
 
-![medium_logo](/docs_assets/medium_logo.png | =150x150 )
+<img src="/docs_assets/medium_logo.png" alt="medium_logo" width="150"/>
+
 A medium's app mobile app clone using dart/flutter framework
 
 # ScreenShots
@@ -61,3 +62,28 @@ A medium's app mobile app clone using dart/flutter framework
     - [ ] Author
     - [ ] Bio
     - [ ] Follow button
+- [ ] Bookmarks page
+- [ ] User profile page
+- [ ] Add article page
+- [ ] Choose tags page
+- [ ] notification page
+- [ ] Complete reading over context notification
+
+
+
+
+
+# Contribute
+You can be a part of this project by contributing / helping in this project
+every type of contribution are welcome in this project from : 
+ - Using the app and declaring issues, bugs, features 
+ - Correcting spells and bad code syntax
+ - Making things reactive like hover / tap effects, search bar reacts
+ - Refactoring code
+ - Add more widgets, screens if you can
+ - Doing missing tasks on the tasks list
+ - Writing a feature
+ - Changing the icons to a lighter one, cause ``Icon`` in flutter aren't light (you can use svg, or a library) 
+ - Linking to a real api ( I know this is my job and I will do it inchallah )
+ - Or pretty everything else :)
+

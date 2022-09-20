@@ -1,11 +1,12 @@
 # Medium app clone
 
-![medium_logo](/docs_assets/medium_logo.png | =150x150 )
+<img src="/docs_assets/medium_logo.png" alt="medium_logo" width="150"/>
+
 A medium's app mobile app clone using dart/flutter framework
 
-# ScreenShots
+# 📱Screen shots
 
-# Tasks
+# 📝 Tasks
 
 - [x] Bottom navigation bar
 - [ ] Home page
@@ -72,7 +73,11 @@ A medium's app mobile app clone using dart/flutter framework
 
 
 
+<<<<<<< HEAD
 # Contribute
+=======
+# ✏️ Contribute
+>>>>>>> 85d9b30c075e67810e041baa36bc99c463c041ee
 You can be a part of this project by contributing / helping in this project
 every type of contribution are welcome in this project from : 
  - Using the app and declaring issues, bugs, features 

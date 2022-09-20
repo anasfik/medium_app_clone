@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:medium_app_clone/app/config/helpers/random_dummy_data/random_data.dart';
 
 import '../../../data/medium_article_card_model.dart';
 
@@ -15,7 +16,7 @@ class ArticleCardsController extends GetxController {
       articleImage: "https://picsum.photos/200/300?random=${index * 2}",
       isSelectedForYouArticle: true,
       author: "anas fikhi",
-      title: "Firebase Remote Config with Flutter",
+      title: RandomData().randomTitle(),
       authorProfileImage: "https://picsum.photos/200/300?random=${index * 2}",
       dateOfPublish: DateTime.now().subtract(
         Duration(

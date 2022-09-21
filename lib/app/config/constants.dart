@@ -75,3 +75,5 @@ const double closeButtonRightSpace = 10;
 const double newListCardBookmarkButtonSize = 50;
 const double newListCardBookmarkOverlayBoxSize = 120;
 const double newListCardBookmarkOverlayBoxOpacity = .25;
+const double newListBookmarkButtonRightPosition = 17.5;
+const double newListBookmarkButtonBottomPosition = 17.5;

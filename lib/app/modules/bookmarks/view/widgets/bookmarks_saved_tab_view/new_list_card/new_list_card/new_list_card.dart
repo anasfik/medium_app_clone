@@ -3,8 +3,10 @@ import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/bookmarks/controllers/bookmarks_saved_tab_view_controller.dart';
 import 'package:medium_app_clone/app/modules/bookmarks/view/widgets/medium_header_button.dart';
 
+import '../../../../../../../config/constants.dart';
 import '../new_list_button/new_list_button.dart';
-import 'new_list_title/new_list_title.dart';
+import 'sub_widgets/new_list_card_bookmark_circular_button.dart';
+import 'sub_widgets/new_list_title.dart';
 
 class CreateNewListCard extends GetView<BookmarksSavedTabViewController> {
   const CreateNewListCard({super.key});
@@ -17,9 +19,12 @@ class CreateNewListCard extends GetView<BookmarksSavedTabViewController> {
           width: double.infinity,
           decoration: BoxDecoration(
             color: Theme.of(context).cardColor,
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(newListCardBorderRadius),
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          padding: const EdgeInsets.symmetric(
+            horizontal: newListCardHorizontalPadding,
+            vertical: newListCardVerticalPadding,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -34,10 +39,18 @@ class CreateNewListCard extends GetView<BookmarksSavedTabViewController> {
             ],
           ),
         ),
-        const Positioned(
+        Positioned(
+          top: closeButtonTopSpace,
+          right: closeButtonRightSpace,
           child: Icon(
             Icons.close,
+            color: Theme.of(context).primaryColor,
           ),
+        ),
+        const Positioned(
+          bottom: closeButtonTopSpace,
+          right: closeButtonRightSpace,
+          child: NewListCardBookmarkCircularButton(),
         )
       ],
     );

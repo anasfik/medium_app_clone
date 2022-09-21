@@ -13,7 +13,7 @@ class BookmarksCreatedListsController extends GetxController {
       name: "reading list",
       storiesList: <ArticleCard>[
         ...List.from(
-          Get.find<ArticleCardsController>().articles.take(2),
+          Get.find<ArticleCardsController>().articles.take(4),
         )
       ],
       isPrivate: true,
@@ -22,7 +22,7 @@ class BookmarksCreatedListsController extends GetxController {
       name: "flutter advanced tutorials",
       storiesList: <ArticleCard>[
         ...List.from(
-          Get.find<ArticleCardsController>().articles.take(2),
+          Get.find<ArticleCardsController>().articles.take(1),
         ),
       ],
     ),

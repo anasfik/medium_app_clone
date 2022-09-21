@@ -31,7 +31,7 @@ class CreateNewListCard extends GetView<BookmarksSavedTabViewController> {
             children: <Widget>[
               const NewListTitle(),
               const SizedBox(
-                height: 40,
+                height: 30,
               ),
               NewListButton(
                 backgroundColor: Theme.of(context).colorScheme.primary,

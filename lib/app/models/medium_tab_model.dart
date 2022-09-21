@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medium_app_clone/helpers/string_extension/string_extension.dart';
+import 'package:medium_app_clone/helpers/extensions/string_extension/string_extension.dart';
 
 class TabModel {
   TabModel({

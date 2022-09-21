@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:medium_app_clone/app/modules/home/views/widgets/medium_article_card/sub_widgets/author_information.dart';
 
 import '../../../../../../config/constants.dart';
-import '../../../../../../../helpers/string_extension/string_extension.dart';
+import '../../../../../../../helpers/extensions/string_extension/string_extension.dart';
 
 class HighlightCardCornerInformation extends ArticleAuthorInformation {
   const HighlightCardCornerInformation({

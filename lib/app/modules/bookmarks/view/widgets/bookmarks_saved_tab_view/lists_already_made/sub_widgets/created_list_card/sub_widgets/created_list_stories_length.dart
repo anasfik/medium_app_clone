@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/bookmarks/controllers/bookmarks_created_lists_controller.dart';
+import 'package:medium_app_clone/helpers/extensions/string_extension/string_extension.dart';
+import 'package:medium_app_clone/helpers/extensions/int_extension/int_extension.dart';
 
+import '../../../../../../../../../config/constants.dart';
 import '../../../../../../../../../config/themes/colors/colors.dart';
 
-class CreatedListStoriesLength
+class CreatedListStoriesInfo
     extends GetWidget<BookmarksCreatedListsController> {
-  const CreatedListStoriesLength({
+  const CreatedListStoriesInfo({
     super.key,
     this.singularWordOfObject = "story",
     this.pluralWordOfObject = "stories",
@@ -18,47 +21,23 @@ class CreatedListStoriesLength
   final String singularWordOfObject;
   @override
   Widget build(BuildContext context) {
-    return Text(
-      showStoriesInfo(
-        length,
-        pluralWordOfObject: controller.pluralWordOfObject,
-        singularWordOfObject: controller.singularWordOfObject,
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: newListCardHorizontalPadding,
       ),
-      style: Theme.of(context).textTheme.titleSmall!.copyWith(
-        color: MediumColors.darkBlack,
-        fontSize: 13,
-        fontWeight: FontWeight.w600,
-        shadows: <Shadow>[
-          Shadow(
-            color: MediumColors.darkBlack,
-            offset: const Offset(0.2, 0.2),
-            blurRadius: 0,
-          ),
-          Shadow(
-            color: MediumColors.darkBlack,
-            offset: const Offset(-0.2, -0.2),
-            blurRadius: 0,
-          )
-        ],
+      child: Text(
+        length
+            .toStringWithWord(
+              pluralWordOfObject: controller.pluralWordOfObject,
+              singularWordOfObject: controller.singularWordOfObject,
+            )
+            .firstLettersToCapital(),
+        style: Theme.of(context).textTheme.labelLarge!.copyWith(
+              color: MediumColors.darkBlack.withOpacity(.9),
+              fontSize: 12,
+              fontWeight: FontWeight.w100,
+            ),
       ),
     );
   }
-}
-
-String showStoriesInfo(
-  int storiesLength, {
-  required String pluralWordOfObject,
-  required String singularWordOfObject,
-}) {
-  late String afterWordToShow;
-  if (storiesLength == 0) {
-    afterWordToShow = 'No $pluralWordOfObject yet';
-  } else if (storiesLength == 1) {
-    afterWordToShow = '1 $singularWordOfObject';
-  } else if (storiesLength > 1) {
-    afterWordToShow = '$storiesLength $pluralWordOfObject';
-  } else {
-    afterWordToShow = 'No $pluralWordOfObject yet';
-  }
-  return afterWordToShow;
 }

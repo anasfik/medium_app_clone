@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medium_app_clone/app/modules/bookmarks/controllers/bookmarks_view_controller.dart';
-import 'package:medium_app_clone/helpers/string_extension/string_extension.dart';
+import 'package:medium_app_clone/helpers/extensions/string_extension/string_extension.dart';
 
 import '../../../../config/constants.dart';
 

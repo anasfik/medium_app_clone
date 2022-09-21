@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
-import 'package:medium_app_clone/helpers/string_extension/string_extension.dart';
+import 'package:medium_app_clone/helpers/extensions/string_extension/string_extension.dart';
 
 class ArticleTagsChip extends StatelessWidget {
   const ArticleTagsChip({

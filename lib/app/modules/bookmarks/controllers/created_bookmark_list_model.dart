@@ -7,9 +7,8 @@ class CreatedBookmarkList {
   String name;
   List<ArticleCard> storiesList;
   bool isPrivate;
-
+  
   CreatedBookmarkList({
-   
     required this.name,
     required this.storiesList,
     this.isPrivate = false,

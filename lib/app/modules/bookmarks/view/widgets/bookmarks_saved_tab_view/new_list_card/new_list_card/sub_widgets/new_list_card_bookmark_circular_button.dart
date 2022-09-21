@@ -11,7 +11,9 @@ class NewListCardBookmarkCircularButton extends StatelessWidget {
       width: newListCardBookmarkOverlayBoxSize,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: Theme.of(context).primaryColor.withOpacity(newListCardBookmarkOverlayBoxOpacity),
+        color: Theme.of(context)
+            .primaryColor
+            .withOpacity(newListCardBookmarkOverlayBoxOpacity),
       ),
       child: Center(
         child: ConstrainedBox(

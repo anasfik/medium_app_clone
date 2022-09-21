@@ -14,6 +14,7 @@ class CreateNewListCard extends GetView<BookmarksSavedTabViewController> {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      clipBehavior: Clip.hardEdge,
       children: [
         Container(
           width: double.infinity,
@@ -30,7 +31,7 @@ class CreateNewListCard extends GetView<BookmarksSavedTabViewController> {
             children: <Widget>[
               const NewListTitle(),
               const SizedBox(
-                height: 30,
+                height: 40,
               ),
               NewListButton(
                 backgroundColor: Theme.of(context).colorScheme.primary,

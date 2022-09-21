@@ -4,7 +4,7 @@ import 'package:medium_app_clone/helpers/string_extension/string_extension.dart'
 import '../../../../../../../../config/themes/colors/colors.dart';
 
 class NewListTitle extends StatelessWidget {
-  const NewListTitle({super.key});
+  const NewListTitle({super.key, });
 
   @override
   Widget build(BuildContext context) {

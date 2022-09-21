@@ -72,6 +72,9 @@ class MediumThemes {
       ),
       buttonColor: MediumColors.green,
     ),
-    hoverColor: MediumColors.green.withGreen(bookmarksHeaderButtonHoverBgColorDarkness),
+    hoverColor:
+        MediumColors.green.withGreen(bookmarksHeaderButtonHoverBgColorDarkness),
+        
+    cardColor: MediumColors.green,
   );
 }

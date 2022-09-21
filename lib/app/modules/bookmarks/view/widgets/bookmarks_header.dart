@@ -7,6 +7,6 @@ class MediumBookmarksHeader extends MediumHomeHeader {
     super.title = "your lists",
     super.showIcon = false,
     super.showButton = true,
-    super.buttonWidget = const MediumHeaderButton(text: 'new list'),
+    super.buttonWidget,
   });
 }

@@ -67,11 +67,11 @@ const int bookmarksHeaderButtonHoverBgColorDarkness = 100;
 // new list card
 const double newListCardBorderRadius = 5;
 const double newListCardHorizontalPadding = 20;
-const double newListCardVerticalPadding = 20;
+const double newListCardVerticalPadding = 30;
 
 const double closeButtonTopSpace = 10;
 const double closeButtonRightSpace = 10;
 
-const double newListCardBookmarkButtonSize = 40;
-const double newListCardBookmarkOverlayBoxSize = 100;
+const double newListCardBookmarkButtonSize = 50;
+const double newListCardBookmarkOverlayBoxSize = 120;
 const double newListCardBookmarkOverlayBoxOpacity = .25;

@@ -48,8 +48,8 @@ class CreateNewListCard extends GetView<BookmarksSavedTabViewController> {
           ),
         ),
         const Positioned(
-          bottom: closeButtonTopSpace,
-          right: closeButtonRightSpace,
+          bottom: -17.5,
+          right: -17.5,
           child: NewListCardBookmarkCircularButton(),
         )
       ],

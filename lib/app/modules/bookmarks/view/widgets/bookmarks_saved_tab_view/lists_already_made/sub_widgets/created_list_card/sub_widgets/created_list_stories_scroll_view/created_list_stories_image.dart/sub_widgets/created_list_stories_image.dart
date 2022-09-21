@@ -11,9 +11,9 @@ class CreatedListStoriesImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: 2.5),
       width: 120,
-      height: 90,
+      height: 100,
       child: Image.network(
         story.articleImage,
         fit: BoxFit.cover,

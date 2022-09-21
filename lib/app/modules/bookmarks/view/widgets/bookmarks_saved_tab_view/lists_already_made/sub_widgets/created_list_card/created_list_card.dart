@@ -17,11 +17,8 @@ class CreatedListCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-            vertical: newListCardVerticalPadding,
-          ) +
-          const EdgeInsets.only(
-            left: newListCardHorizontalPadding,
-          ),
+        vertical: newListCardVerticalPadding,
+      ),
       width: double.infinity,
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
@@ -39,9 +36,15 @@ class CreatedListCard extends StatelessWidget {
           CreatedListCardTitle(
             title: createdBookmarkList.name,
           ),
+          const SizedBox(
+            height: 5,
+          ),
           CreatedListStoriesInfo(
             length: createdBookmarkList.storiesList.length,
-            pluralWordOfObject: createdBookmarkList.name,
+            isPrivate: createdBookmarkList.isPrivate,
+          ),
+          const SizedBox(
+            height: 15,
           ),
           CreatedListStoriesImagesScrollView(
             storiesList: createdBookmarkList.storiesList,

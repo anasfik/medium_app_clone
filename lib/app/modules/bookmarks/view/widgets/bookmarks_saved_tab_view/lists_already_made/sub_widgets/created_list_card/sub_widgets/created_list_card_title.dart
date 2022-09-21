@@ -13,12 +13,13 @@ class CreatedListCardTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: newListCardHorizontalPadding),
+      padding:
+          const EdgeInsets.symmetric(horizontal: newListCardHorizontalPadding),
       child: Text(
         title.firstLettersToCapital(),
         style: Theme.of(context).textTheme.titleSmall!.copyWith(
           color: MediumColors.darkBlack,
-          fontSize: 13,
+          fontSize: 16,
           fontWeight: FontWeight.w600,
           shadows: <Shadow>[
             Shadow(

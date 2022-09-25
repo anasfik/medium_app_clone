@@ -21,6 +21,9 @@ class BookmarkHighlightView extends GetView<HighlightTabViewController> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
             IdkWhatThisCalledAndIDontKnowIfIShouldMakeItProgramaticallyOrNot(),
+            SizedBox(
+              height: 20,
+            ),
             Center(child: NoHighlightDescription()),
           ],
         ),

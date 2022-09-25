@@ -9,6 +9,7 @@ class NoHighlightDescription extends StatelessWidget {
     return Text(
       "when you find passages that resonate with you, you can highlight them to save them here"
           .firstLettersToCapital(),
+      textAlign: TextAlign.center,
     );
   }
 }

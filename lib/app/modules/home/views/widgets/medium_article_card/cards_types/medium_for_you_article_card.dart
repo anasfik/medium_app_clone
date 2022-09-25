@@ -11,9 +11,18 @@ import '../sub_widgets/article_reason_to_show_with_execute_icons.dart';
 import '../sub_widgets/author_information.dart';
 
 class ForYouArticleCard extends StatelessWidget {
-  const ForYouArticleCard({Key? key, required this.article}) : super(key: key);
+  const ForYouArticleCard({
+    Key? key,
+    required this.article,
+    this.executeIcons = const <ExecuteIcons>[
+      ExecuteIcons.addBookmarks,
+      ExecuteIcons.showLessLikeThis,
+      ExecuteIcons.moreOptions,
+    ],
+  }) : super(key: key);
 
   final ArticleCard article;
+  final List<ExecuteIcons> executeIcons;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -55,11 +64,7 @@ class ForYouArticleCard extends StatelessWidget {
                 reasonToShow: article.tags.isNotEmpty
                     ? null
                     : ReasonToShow.basedOnHistory,
-                executeIcons: const <ExecuteIcons>[
-                  ExecuteIcons.addBookmarks,
-                  ExecuteIcons.showLessLikeThis,
-                  ExecuteIcons.moreOptions,
-                ],
+                executeIcons: executeIcons,
                 replaceWithTags: article.tags.isNotEmpty,
                 tagsList: article.tags,
               ),

@@ -6,5 +6,6 @@ class RecentlyViewedArticle extends MediumArticleCard {
     super.key,
     required super.article,
     super.isForYouArticleCard = false,
+    
   });
 }

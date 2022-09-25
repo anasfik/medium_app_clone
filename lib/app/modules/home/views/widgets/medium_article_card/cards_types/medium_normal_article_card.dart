@@ -3,16 +3,23 @@ import 'package:medium_app_clone/app/models/medium_article_card_model.dart';
 
 import '../../../../../../models/medium_article_card_execute_icon_model.dart';
 import '../../../../../../config/constants.dart';
-import '../../../../controllers/article_cards_controller.dart';
-import '../sub_widgets/article_date_information.dart';
 import '../sub_widgets/article_main_information.dart';
 import '../sub_widgets/article_reason_to_show_with_execute_icons.dart';
 import '../sub_widgets/author_information.dart';
 
 class NormalArticleCard extends StatelessWidget {
-  const NormalArticleCard({Key? key, required this.article}) : super(key: key);
+  const NormalArticleCard({
+    Key? key,
+    required this.article,
+  this.executeIcons = const <ExecuteIcons>[
+      ExecuteIcons.addBookmarks,
+      // ExecuteIcons.showLessLikeThis,
+      ExecuteIcons.moreOptions,
+    ],
+  }) : super(key: key);
 
   final ArticleCard article;
+  final List<ExecuteIcons> executeIcons;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -51,14 +58,9 @@ class NormalArticleCard extends StatelessWidget {
                 height: 15,
               ),
               ArticleReasonToShowWithExecuteIconsOrTags(
-                isNormalCard: true,
-                article: article,
-                executeIcons: const <ExecuteIcons>[
-                  ExecuteIcons.addBookmarks,
-                  // ExecuteIcons.showLessLikeThis,
-                  ExecuteIcons.moreOptions,
-                ],
-              ),
+                  isNormalCard: true,
+                  article: article,
+                  executeIcons: executeIcons),
             ],
           ),
         ),

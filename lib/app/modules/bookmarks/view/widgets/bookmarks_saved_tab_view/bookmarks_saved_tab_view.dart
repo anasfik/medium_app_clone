@@ -15,7 +15,9 @@ class BookmarksSavedTabView extends GetView<BookmarksSavedTabViewController> {
         margin: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
+            const SizedBox(height: 20),
             const CreateNewListCard(),
+            const SizedBox(height: 20),
             ListsAlreadyMade(),
           ],
         ),
